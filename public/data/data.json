@@ -17,7 +17,8 @@
           "note": null,
           "tier": 1,
           "handle": "@samdape",
-          "bio": "making things · sam-peitz.com"
+          "bio": "making things · sam-peitz.com",
+          "localImg": "/avatars/samdape.jpg"
         },
         {
           "name": "Caleb Wu",
@@ -25,7 +26,8 @@
           "note": null,
           "tier": 2,
           "handle": "@calebwu_",
-          "bio": "design @ revisiondojo (YC F24)"
+          "bio": "design @ revisiondojo (YC F24)",
+          "localImg": "/avatars/calebwu_.jpg"
         },
         {
           "name": "Joonas Virtanen",
@@ -81,7 +83,8 @@
           "note": null,
           "tier": 1,
           "handle": "@haris_chc",
-          "bio": "design & marketing @quartr_app"
+          "bio": "design & marketing @quartr_app",
+          "localImg": "/avatars/haris_chc.jpg"
         },
         {
           "name": "Karissa",
@@ -137,7 +140,8 @@
           "note": null,
           "tier": 2,
           "handle": "@jackie_zhang_ls",
-          "bio": "Senior Product Designer @friendsofbash"
+          "bio": "Senior Product Designer @friendsofbash",
+          "localImg": "/avatars/jackie_zhang_ls.jpg"
         },
         {
           "name": "keeyen",
@@ -153,7 +157,8 @@
           "note": null,
           "tier": 1,
           "handle": "@Ryan__Stephen",
-          "bio": "designer + prototyper"
+          "bio": "designer + prototyper",
+          "localImg": "/avatars/Ryan__Stephen.jpg"
         },
         {
           "name": "Kacper",
@@ -169,7 +174,8 @@
           "note": null,
           "tier": 2,
           "handle": "@Gavmn",
-          "bio": "Interaction designer @OpenAI"
+          "bio": "Interaction designer @OpenAI",
+          "localImg": "/avatars/Gavmn.jpg"
         },
         {
           "name": "Ryo Lu",
@@ -177,7 +183,8 @@
           "note": null,
           "tier": 1,
           "handle": "@ryolu_",
-          "bio": "Design @Cursor_ai — early @NotionHQ @Stripe"
+          "bio": "Design @Cursor_ai — early @NotionHQ @Stripe",
+          "localImg": "/avatars/ryolu_.jpg"
         },
         {
           "name": "Noah Levin",
@@ -193,7 +200,8 @@
           "note": null,
           "tier": 1,
           "handle": "@raunofreiberg",
-          "bio": "staff design engineer @Vercel · devouringdetails.com"
+          "bio": "staff design engineer @Vercel · devouringdetails.com",
+          "localImg": "/avatars/raunofreiberg.jpg"
         },
         {
           "name": "Wojciech Zieliński",
@@ -217,7 +225,8 @@
           "note": null,
           "tier": 2,
           "handle": "@chan_k",
-          "bio": "Human Interface designer @ Apple"
+          "bio": "Human Interface designer @ Apple",
+          "localImg": "/avatars/chan_k.jpg"
         },
         {
           "name": "Seungmee",
@@ -233,7 +242,8 @@
           "note": null,
           "tier": 2,
           "handle": "@toddham",
-          "bio": "Design engineer @monogram_ai — prev @Meta"
+          "bio": "Design engineer @monogram_ai — prev @Meta",
+          "localImg": "/avatars/toddham.jpg"
         },
         {
           "name": "Paco",
@@ -249,7 +259,8 @@
           "note": null,
           "tier": 1,
           "handle": "@jakubkrehel",
-          "bio": "founding design engineer @interfere_"
+          "bio": "founding design engineer @interfere_",
+          "localImg": "/avatars/jakubkrehel.jpg"
         },
         {
           "name": "JohnPhamous",
@@ -257,7 +268,8 @@
           "note": null,
           "tier": 2,
           "handle": "@JohnPhamous",
-          "bio": "design eng @Vercel — angel investor — a16z scout"
+          "bio": "design eng @Vercel — angel investor — a16z scout",
+          "localImg": "/avatars/JohnPhamous.png"
         },
         {
           "name": "Ilya · イリア",
@@ -281,7 +293,8 @@
           "note": null,
           "tier": 2,
           "handle": "@meshtimes_",
-          "bio": "telling stories with design / code / internet experiments"
+          "bio": "telling stories with design / code / internet experiments",
+          "localImg": "/avatars/meshtimes_.jpg"
         },
         {
           "name": "Emil Kowalski",
@@ -401,7 +414,8 @@
           "note": null,
           "tier": 2,
           "handle": "@monmichalczyk",
-          "bio": "websites / visual design / design resources @Framer"
+          "bio": "websites / visual design / design resources @Framer",
+          "localImg": "/avatars/monmichalczyk.jpg"
         },
         {
           "name": "Marko Ilic",
@@ -409,7 +423,8 @@
           "note": null,
           "tier": 2,
           "handle": "@markoilico",
-          "bio": "See.Design — design for Tech / SaaS & AI"
+          "bio": "See.Design — design for Tech / SaaS & AI",
+          "localImg": "/avatars/markoilico.jpg"
         },
         {
           "name": "Zsolt Kálmán",
