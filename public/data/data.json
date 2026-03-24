@@ -1,0 +1,1116 @@
+{
+  "meta": {
+    "title": "Design Resource Library",
+    "author": "Xiaoyang Hu",
+    "site": "xiaoyanghu.com",
+    "description": "A curated collection of design resources for designers and web coders, organized by category."
+  },
+  "categories": [
+    {
+      "id": "x-bloggers",
+      "label": "X Accounts to Follow",
+      "description": "The foundation of your daily aesthetic intake. These designers work at places like Vercel, Figma, Linear, and OpenAI. Honestly, X is where the highest quality design thinking lives right now. It's the best platform to learn and build your aesthetic sensibility, one scroll at a time.\n\nThis is a starting point, not a complete list. Follow these designers and X's algorithm will gradually surface more people worth your attention. That's how taste compounds.",
+      "items": [
+        {
+          "name": "sam",
+          "url": "https://x.com/samdape",
+          "note": null,
+          "tier": 1,
+          "handle": "@samdape",
+          "bio": "making things · sam-peitz.com"
+        },
+        {
+          "name": "Caleb Wu",
+          "url": "https://x.com/calebwu_",
+          "note": null,
+          "tier": 2,
+          "handle": "@calebwu_",
+          "bio": "design @ revisiondojo (YC F24)"
+        },
+        {
+          "name": "Joonas Virtanen",
+          "url": "https://x.com/joonasvirtanen",
+          "note": null,
+          "tier": 2,
+          "handle": "@joonasvirtanen",
+          "bio": "founding designer @wabi — prev design x AI @Airbnb @Wealthsimple"
+        },
+        {
+          "name": "Stephen Haney",
+          "url": "https://x.com/stephenhaney",
+          "note": null,
+          "tier": 2,
+          "handle": "@stephenhaney",
+          "bio": "founder @paper · for the love of design"
+        },
+        {
+          "name": "Hannah Hearth",
+          "url": "https://x.com/hannah_hearth",
+          "note": null,
+          "tier": 2,
+          "handle": "@hannah_hearth",
+          "bio": "Head of Product Design @ Vercel — prev @Webflow @HashiCorp"
+        },
+        {
+          "name": "Evil Rabbit",
+          "url": "https://x.com/evilrabbit_",
+          "note": null,
+          "tier": 2,
+          "handle": "@evilrabbit_",
+          "bio": "Vercel Founding Designer"
+        },
+        {
+          "name": "Andrii Mazur",
+          "url": "https://x.com/mazur_designs",
+          "note": null,
+          "tier": 2,
+          "handle": "@mazur_designs",
+          "bio": "designing @vapi_ai (YC) — prev @respellai · SF"
+        },
+        {
+          "name": "Tom Johnson",
+          "url": "https://x.com/tomjohndesign",
+          "note": null,
+          "tier": 2,
+          "handle": "@tomjohndesign",
+          "bio": "Staff Product Designer @Vercel @v0"
+        },
+        {
+          "name": "haris",
+          "url": "https://x.com/haris_chc",
+          "note": null,
+          "tier": 1,
+          "handle": "@haris_chc",
+          "bio": "design & marketing @quartr_app"
+        },
+        {
+          "name": "Karissa",
+          "url": "https://x.com/karissawongg",
+          "note": null,
+          "tier": 2,
+          "handle": "@karissawongg",
+          "bio": "design @Roblox — ambassador @rive_app — prev @UCBerkeley"
+        },
+        {
+          "name": "emmi ✶",
+          "url": "https://x.com/soggyburritowu",
+          "note": null,
+          "tier": 2,
+          "handle": "@soggyburritowu",
+          "bio": "designer @perplexity_ai • @Penn"
+        },
+        {
+          "name": "McLane",
+          "url": "https://x.com/mclaneteitel",
+          "note": null,
+          "tier": 2,
+          "handle": "@mclaneteitel",
+          "bio": "Product Design Studio @Shopify — prev @Airbnb @Instagram @Squarespace"
+        },
+        {
+          "name": "Ammaar Reshi",
+          "url": "https://x.com/ammaar",
+          "note": null,
+          "tier": 2,
+          "handle": "@ammaar",
+          "bio": "Lead Product + Design @GoogleAIStudio"
+        },
+        {
+          "name": "joshpuckett",
+          "url": "https://x.com/joshpuckett",
+          "note": null,
+          "tier": 2,
+          "handle": "@joshpuckett",
+          "bio": "Designing at @IterationDesign — prev Dropbox / Wealthfront"
+        },
+        {
+          "name": "Nad Chishtie",
+          "url": "https://x.com/nadonomy",
+          "note": null,
+          "tier": 2,
+          "handle": "@nadonomy",
+          "bio": "head of design & founding designer @lovable"
+        },
+        {
+          "name": "Jackie Zhang",
+          "url": "https://x.com/jackie_zhang_ls",
+          "note": null,
+          "tier": 2,
+          "handle": "@jackie_zhang_ls",
+          "bio": "Senior Product Designer @friendsofbash"
+        },
+        {
+          "name": "keeyen",
+          "url": "https://x.com/keeyeny",
+          "note": null,
+          "tier": 2,
+          "handle": "@keeyeny",
+          "bio": "prev design @Figma — now @reve"
+        },
+        {
+          "name": "Ryan Stephen",
+          "url": "https://x.com/Ryan__Stephen",
+          "note": null,
+          "tier": 1,
+          "handle": "@Ryan__Stephen",
+          "bio": "designer + prototyper"
+        },
+        {
+          "name": "Kacper",
+          "url": "https://x.com/kacperfyi",
+          "note": null,
+          "tier": 2,
+          "handle": "@kacperfyi",
+          "bio": "Designing @Wander — Framer Expert"
+        },
+        {
+          "name": "Gavin Nelson",
+          "url": "https://x.com/Gavmn",
+          "note": null,
+          "tier": 2,
+          "handle": "@Gavmn",
+          "bio": "Interaction designer @OpenAI"
+        },
+        {
+          "name": "Ryo Lu",
+          "url": "https://x.com/ryolu_",
+          "note": null,
+          "tier": 1,
+          "handle": "@ryolu_",
+          "bio": "Design @Cursor_ai — early @NotionHQ @Stripe"
+        },
+        {
+          "name": "Noah Levin",
+          "url": "https://x.com/nlevin",
+          "note": null,
+          "tier": 2,
+          "handle": "@nlevin",
+          "bio": "VP of Design @Figma"
+        },
+        {
+          "name": "rauno",
+          "url": "https://x.com/raunofreiberg",
+          "note": null,
+          "tier": 1,
+          "handle": "@raunofreiberg",
+          "bio": "staff design engineer @Vercel · devouringdetails.com"
+        },
+        {
+          "name": "Wojciech Zieliński",
+          "url": "https://x.com/zielinskiwoj",
+          "note": null,
+          "tier": 2,
+          "handle": "@zielinskiwoj",
+          "bio": "Product Designer @Adobe"
+        },
+        {
+          "name": "Farrel Putra",
+          "url": "https://x.com/farrelput",
+          "note": null,
+          "tier": 2,
+          "handle": "@farrelput",
+          "bio": "senior product designer — building @flareicons"
+        },
+        {
+          "name": "Chan Karunamuni",
+          "url": "https://x.com/chan_k",
+          "note": null,
+          "tier": 2,
+          "handle": "@chan_k",
+          "bio": "Human Interface designer @ Apple"
+        },
+        {
+          "name": "Seungmee",
+          "url": "https://x.com/smee_leee",
+          "note": null,
+          "tier": 2,
+          "handle": "@smee_leee",
+          "bio": "design + code — currently @Figma"
+        },
+        {
+          "name": "Todd Hamilton",
+          "url": "https://x.com/toddham",
+          "note": null,
+          "tier": 2,
+          "handle": "@toddham",
+          "bio": "Design engineer @monogram_ai — prev @Meta"
+        },
+        {
+          "name": "Paco",
+          "url": "https://x.com/pacocoursey",
+          "note": null,
+          "tier": 2,
+          "handle": "@pacocoursey",
+          "bio": "Crafting interfaces @Linear"
+        },
+        {
+          "name": "Jakub Krehel",
+          "url": "https://x.com/jakubkrehel",
+          "note": null,
+          "tier": 1,
+          "handle": "@jakubkrehel",
+          "bio": "founding design engineer @interfere_"
+        },
+        {
+          "name": "JohnPhamous",
+          "url": "https://x.com/JohnPhamous",
+          "note": null,
+          "tier": 2,
+          "handle": "@JohnPhamous",
+          "bio": "design eng @Vercel — angel investor — a16z scout"
+        },
+        {
+          "name": "Ilya · イリア",
+          "url": "https://x.com/ilyamiskov",
+          "note": null,
+          "tier": 1,
+          "handle": "@ilyamiskov",
+          "bio": "Visual UI Designer @Whop — prev @Sketch @Frame.io"
+        },
+        {
+          "name": "tom things",
+          "url": "https://x.com/tomthings1",
+          "note": null,
+          "tier": 2,
+          "handle": "@tomthings1",
+          "bio": "design that feels alive"
+        },
+        {
+          "name": "marisa",
+          "url": "https://x.com/meshtimes_",
+          "note": null,
+          "tier": 2,
+          "handle": "@meshtimes_",
+          "bio": "telling stories with design / code / internet experiments"
+        },
+        {
+          "name": "Emil Kowalski",
+          "url": "https://x.com/emilkowalski",
+          "note": null,
+          "tier": 2,
+          "handle": "@emilkowalski",
+          "bio": "@Linear · animations.dev"
+        },
+        {
+          "name": "pauline",
+          "url": "https://x.com/pau_wee_",
+          "note": null,
+          "tier": 2,
+          "handle": "@pau_wee_",
+          "bio": "design / engineer"
+        },
+        {
+          "name": "Ridd",
+          "url": "https://x.com/ridd_design",
+          "note": null,
+          "tier": 1,
+          "handle": "@ridd_design",
+          "bio": "building inflight.co — learning dive.club"
+        },
+        {
+          "name": "kushal",
+          "url": "https://x.com/kuxshl",
+          "note": null,
+          "tier": 2,
+          "handle": "@kuxshl",
+          "bio": "designer · building oakline.studio"
+        },
+        {
+          "name": "Douglas Wang",
+          "url": "https://x.com/wangdouglas",
+          "note": null,
+          "tier": 2,
+          "handle": "@wangdouglas",
+          "bio": "Product & Design lead of AI Design products — prev @Alibaba"
+        },
+        {
+          "name": "Cheng-Wei Hu",
+          "url": "https://x.com/HcwXd",
+          "note": null,
+          "tier": 2,
+          "handle": "@HcwXd",
+          "bio": "building @wonderingapp — prev @NotebookLM"
+        },
+        {
+          "name": "Marysia",
+          "url": "https://x.com/marysia_cc",
+          "note": null,
+          "tier": 2,
+          "handle": "@marysia_cc",
+          "bio": "One Picture is Worth a Thousand Words"
+        },
+        {
+          "name": "techbimbo",
+          "url": "https://x.com/jameygannon",
+          "note": null,
+          "tier": 2,
+          "handle": "@jameygannon",
+          "bio": "branding & AI · The AI Creative Director Course"
+        },
+        {
+          "name": "Hewar",
+          "url": "https://x.com/hewarsaber",
+          "note": null,
+          "tier": 2,
+          "handle": "@hewarsaber",
+          "bio": "Websites / Branding / Product · konvert.design"
+        },
+        {
+          "name": "Cedrik Stephen",
+          "url": "https://x.com/CedrikStephen",
+          "note": null,
+          "tier": 2,
+          "handle": "@CedrikStephen",
+          "bio": "branding & web · cedrikstephen.com"
+        },
+        {
+          "name": "Green Yang",
+          "url": "https://x.com/greeenyang",
+          "note": null,
+          "tier": 2,
+          "handle": "@greeenyang",
+          "bio": "Visual design & Framer template designer"
+        },
+        {
+          "name": "Adrian",
+          "url": "https://x.com/adriankuleszo",
+          "note": null,
+          "tier": 2,
+          "handle": "@adriankuleszo",
+          "bio": "design & dev for tech startups @designme"
+        },
+        {
+          "name": "Steve Lauda",
+          "url": "https://x.com/stevelauda_",
+          "note": null,
+          "tier": 2,
+          "handle": "@stevelauda_",
+          "bio": "Branding / digital apps / website / motion · blissful-studio.com"
+        },
+        {
+          "name": "Brett",
+          "url": "https://x.com/BrettFromDJ",
+          "note": null,
+          "tier": 2,
+          "handle": "@BrettFromDJ",
+          "bio": "Running a $1M one-man design studio · Designjoy.co"
+        },
+        {
+          "name": "monika michalczyk",
+          "url": "https://x.com/monmichalczyk",
+          "note": null,
+          "tier": 2,
+          "handle": "@monmichalczyk",
+          "bio": "websites / visual design / design resources @Framer"
+        },
+        {
+          "name": "Marko Ilic",
+          "url": "https://x.com/markoilico",
+          "note": null,
+          "tier": 2,
+          "handle": "@markoilico",
+          "bio": "See.Design — design for Tech / SaaS & AI"
+        },
+        {
+          "name": "Zsolt Kálmán",
+          "url": "https://x.com/ui_zsolt",
+          "note": null,
+          "tier": 1,
+          "handle": "@ui_zsolt",
+          "bio": "builds cool websites · zenwood.studio"
+        },
+        {
+          "name": "vijay verma",
+          "url": "https://x.com/realvjy",
+          "note": null,
+          "tier": 2,
+          "handle": "@realvjy",
+          "bio": "indie studio · 3dicons.co · @overlayzstudio"
+        },
+        {
+          "name": "Charlie Isslander",
+          "url": "https://x.com/charlieissland",
+          "note": null,
+          "tier": 2,
+          "handle": "@charlieissland",
+          "bio": "Head of Design @madebysoulmates — prev @RiotGames @f_i"
+        },
+        {
+          "name": "Andrey",
+          "url": "https://x.com/dchernyshuk",
+          "note": null,
+          "tier": 2,
+          "handle": "@dchernyshuk",
+          "bio": "Designing websites / interfaces / AI pipelines"
+        },
+        {
+          "name": "Kailash",
+          "url": "https://x.com/kail_designs",
+          "note": null,
+          "tier": 2,
+          "handle": "@kail_designs",
+          "bio": "Designer · Awwwards Jury · 100k+ Instagram"
+        },
+        {
+          "name": "tibo",
+          "url": "https://x.com/tibolasticot",
+          "note": null,
+          "tier": 2,
+          "handle": "@tibolasticot",
+          "bio": "I make 3D objects dance"
+        },
+        {
+          "name": "James McDonald",
+          "url": "https://x.com/jamesm",
+          "note": null,
+          "tier": 2,
+          "handle": "@jamesm",
+          "bio": "Design studio @wireframe · co-host @shape_fm"
+        },
+        {
+          "name": "Oğuz Yağız Kara",
+          "url": "https://x.com/oguzyagizkara",
+          "note": null,
+          "tier": 1,
+          "handle": "@oguzyagizkara",
+          "bio": "Co-Founder & Designer @LueStudio"
+        },
+        {
+          "name": "Mehdi",
+          "url": "https://x.com/stoitec",
+          "note": null,
+          "tier": 2,
+          "handle": "@stoitec",
+          "bio": "Web Design & Development · kuartz.studio"
+        },
+        {
+          "name": "Artur Bień",
+          "url": "https://x.com/artur_bien",
+          "note": null,
+          "tier": 2,
+          "handle": "@artur_bien",
+          "bio": "design engineer @Whop · built @react95_io"
+        },
+        {
+          "name": "chakib",
+          "url": "https://x.com/highpfloat",
+          "note": null,
+          "tier": 2,
+          "handle": "@highpfloat",
+          "bio": "Developer & Designer"
+        },
+        {
+          "name": "Prianca",
+          "url": "https://x.com/heyprianca",
+          "note": null,
+          "tier": 2,
+          "handle": "@heyprianca",
+          "bio": "designer shipping in @Framer everyday"
+        },
+        {
+          "name": "Rich Tabor",
+          "url": "https://x.com/richtabor",
+          "note": null,
+          "tier": 2,
+          "handle": "@richtabor",
+          "bio": "Product @Automattic · making @WordPress AI"
+        },
+        {
+          "name": "Marco Cornacchia",
+          "url": "https://x.com/marcofyi",
+          "note": null,
+          "tier": 2,
+          "handle": "@marcofyi",
+          "bio": "cofounder @turfsports_ · prev @Vercel @Figma @Diagram"
+        },
+        {
+          "name": "Nan Yu",
+          "url": "https://x.com/thenanyu",
+          "note": null,
+          "tier": 2,
+          "handle": "@thenanyu",
+          "bio": "head of product @Linear"
+        },
+        {
+          "name": "Quartr",
+          "url": "https://x.com/Quartr_App",
+          "note": null,
+          "tier": 1,
+          "handle": "@Quartr_App",
+          "bio": "public market research tool"
+        },
+        {
+          "name": "kathy zhou",
+          "url": "https://x.com/kathytzhou",
+          "note": null,
+          "tier": 2,
+          "handle": "@kathytzhou",
+          "bio": "probably vibe coding · design at instagram"
+        },
+        {
+          "name": "Elena",
+          "url": "https://x.com/elenahuxy",
+          "note": null,
+          "tier": 2,
+          "handle": "@elenahuxy",
+          "bio": "me!!"
+        }
+      ]
+    },
+    {
+      "id": "design-inspiration",
+      "label": "Design Inspiration",
+      "description": "Visual reference, interaction inspiration, and aesthetic training. Covers motion galleries, landing page inspiration, experimental design, tools, and personal websites.",
+      "items": [
+        {
+          "name": "Design Spells",
+          "url": "https://www.designspells.com/",
+          "note": "A library of design details that feel like magic moments",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Mobbin",
+          "url": "https://mobbin.com/",
+          "note": "The world's largest library of mobile & web UI screenshots — great for UX research and design reference",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Landingfolio",
+          "url": "https://www.landingfolio.com/",
+          "note": "The best landing page inspiration collection out there",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "awwwards",
+          "url": "https://www.awwwards.com/",
+          "note": "Daily picks of the most worth-seeing web design work",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "FREAK MAG",
+          "url": "https://www.daytona-park.com/freakmag/",
+          "note": "Experimental visual design magazine",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Making Software",
+          "url": "https://www.makingsoftware.com/",
+          "note": "Principles and methods behind great software design",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Rauno Freiberg",
+          "url": "https://rauno.me/",
+          "note": "Personal site of a Vercel design engineer — the details are insane",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Things Inc.",
+          "url": "https://things.inc/",
+          "note": "The Things app website — a masterclass in design detail",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Interface Craft",
+          "url": "https://www.interfacecraft.dev/",
+          "note": "Reference for interface interaction details",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Variant",
+          "url": "https://variant.com/community",
+          "note": "Design community resources",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "GSAP",
+          "url": "https://gsap.com/",
+          "note": "The animation library — essential if you want to learn motion",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Spline",
+          "url": "https://spline.design/",
+          "note": "3D design tool that runs in the browser",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Unicorn Studio",
+          "url": "https://www.unicorn.studio/",
+          "note": "No-code WebGL tool",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Neumorphism",
+          "url": "https://neumorphism.io/#e0e0e0",
+          "note": "CSS neumorphism shadow generator",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        }
+      ]
+    },
+    {
+      "id": "ui-components",
+      "label": "UI Component Libraries",
+      "description": "Front-end UI components and code resources. Most designers have not heard of these — but they are essential if you are doing web coding. Mostly React ecosystem, covering motion components, creative interactions, and style-themed libraries.",
+      "items": [
+        {
+          "name": "React Bits",
+          "url": "https://reactbits.dev/",
+          "note": "Animated UI components for React",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Magic UI",
+          "url": "https://magicui.design/",
+          "note": "Beautiful motion components — great for landing pages",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Aceternity UI",
+          "url": "https://ui.aceternity.com/components",
+          "note": "High-quality React component collection",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Fancy Components",
+          "url": "https://www.fancycomponents.dev/",
+          "note": "Creative front-end component library",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Uiverse",
+          "url": "https://uiverse.io/",
+          "note": "The largest library of open-source UI elements",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Neobrutalism",
+          "url": "https://www.neobrutalism.dev/",
+          "note": "Neo-brutalist style components",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Neo Brutalism UI",
+          "url": "https://neo-brutalism-ui-library.vercel.app/",
+          "note": "Another neo-brutalist UI library",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "CSS Buttons",
+          "url": "https://cssbuttons.io/",
+          "note": "A huge collection of CSS button styles",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "FreeFrontend",
+          "url": "https://freefrontend.com/",
+          "note": "Free front-end code snippets",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "ui-layouts",
+          "url": "https://www.ui-layouts.com/",
+          "note": "UI layout references with code",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "21st.dev",
+          "url": "https://21st.dev/home",
+          "note": "AI-assisted front-end component creation",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        }
+      ]
+    },
+    {
+      "id": "framer-resources",
+      "label": "Framer Resources",
+      "description": "Resources within the Framer ecosystem — components, templates, interaction code, and UI kits. For designers building portfolios or landing pages in Framer.",
+      "items": [
+        {
+          "name": "Remix Lab",
+          "url": "https://remixlab.framer.wiki/",
+          "note": "Framer component wiki and resources",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "framer.today",
+          "url": "https://framer.today/resources",
+          "note": "Framer resource aggregator",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Cursors",
+          "url": "https://cursors.framer.wiki/projects",
+          "note": "Cursor animation components for Framer",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Segment UI",
+          "url": "https://segmentui.com/",
+          "note": "Free components and UI kits for Framer & Figma",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Framer University",
+          "url": "https://framer.university/",
+          "note": "The go-to learning hub for everything Framer",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        }
+      ]
+    },
+    {
+      "id": "portfolio-inspiration",
+      "label": "Portfolio Inspiration",
+      "description": "A curated selection of designer portfolio sites, mostly entry-level and mid-level. Covers Framer, Webflow, and custom-built. Focus on visual style, information structure, and interaction details.",
+      "items": [
+        {
+          "name": "alexyc",
+          "url": "https://alexyc.com/",
+          "note": "One of the best minimal portfolios I've seen",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Yubo Zhao",
+          "url": "https://www.yubozhao.com/",
+          "note": "One of the best minimal portfolios I've seen",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Sujan Khadgi",
+          "url": "https://www.sujankhadgi.com/",
+          "note": "Wild ideas and will make you smile",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Ryo Lu",
+          "url": "https://ryo.lu/",
+          "note": "The reference for OS-style portfolios",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Elisha Jeon",
+          "url": "https://elishajeon.com/",
+          "note": "A completely new pattern to browse case studies",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Daniel Sun",
+          "url": "https://danielsun.space/?ref=pafolios",
+          "note": "Strong distinctive visual style",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Roman Tesliuk",
+          "url": "https://pixelwrld.co/",
+          "note": "So smooth it hurts",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Arshad Riyas",
+          "url": "https://www.arshadriyas.com/",
+          "note": "One of the best minimal portfolios I've seen",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Liandong Zhou",
+          "url": "https://www.liandongzhou.com/",
+          "note": "My favorite neo-brutalist portfolio out there",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Serena Li",
+          "url": "https://www.serenali.ca/",
+          "note": "Hard to imitate — the personal style is too strong",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Uttkarsh Mandaknale",
+          "url": "https://www.uttkarsh.design/",
+          "note": "Love the dreamy aesthetic",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Yihui Hu",
+          "url": "https://www.yihuihu.com/",
+          "note": "I actually prefer his old portfolio — but the current minimal version is still quietly interesting",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Thibaut Crépelle",
+          "url": "https://www.thibaut.cool/",
+          "note": "3D & motion work is seriously impressive",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Marco Cornacchia",
+          "url": "https://www.marco.fyi/",
+          "note": "One of my favorite bento-style portfolios",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Gautam Joshi",
+          "url": "https://gautams.framer.website/",
+          "note": "A fresh take on interaction patterns",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Angelo Arcilla",
+          "url": "https://angeloarcilla.com/",
+          "note": "I have no idea how long this took to build",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Oğuz Yağız Kara",
+          "url": "https://oguzyagiz.com/",
+          "note": "When you're good enough that you don't need a portfolio — this is how you make one anyway and it still shows serious craft",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Alric Monteiro",
+          "url": "https://alric.framer.website/",
+          "note": "Feels like stepping into a fully built cyberpunk universe",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Emmi Wu",
+          "url": "https://emmi.framer.website/",
+          "note": "The visual and creative direction makes you want to keep scrolling",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Jason Spielman",
+          "url": "https://jasonspielman.com/notebooklm",
+          "note": "Can't believe I get to see a NotebookLM case study",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "john phamous",
+          "url": "https://pham.codes/",
+          "note": "Vercel design engineer",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "tom things",
+          "url": "https://tomthings.fr/",
+          "note": "Design that feels alive",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Andrea Da Silva",
+          "url": "https://adasilv2.framer.website/",
+          "note": "Already seen a lot of portfolios that look like this (so impactful)",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "adam syed",
+          "url": "https://syedadam.com/",
+          "note": "Look at this when you have a lot of projects to show",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Mayank Kinger",
+          "url": "https://www.kingermayank.com/",
+          "note": "Solid. Just solid.",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Jackie Zhang",
+          "url": "https://jackiezhang.co.za/",
+          "note": "Strong visual and creative direction",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Matt Sellers",
+          "url": "https://www.lfs.gd/",
+          "note": "Lovable lovable lovable",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Tan Tan Nguyen",
+          "url": "https://tantannguyen.com/",
+          "note": "Strong visual work",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Mo's UX Portfolio",
+          "url": "https://www.tsui-mou.com/",
+          "note": "Rich use of motion",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Uday Shankar",
+          "url": "https://www.uxdayshankar.com/",
+          "note": "I don't usually into SaaS landing page-style portfolios — but this one is the exception",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Seungmee Lee",
+          "url": "https://www.seungmee-lee.com/",
+          "note": "Love the idea of a customizable portfolio",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Xiaoyang Hu",
+          "url": "https://xiaoyanghu.com/",
+          "note": "If you love this site — chances are you'll love my portfolio too",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        }
+      ]
+    },
+    {
+      "id": "portfolio-platforms",
+      "label": "Portfolio Platforms",
+      "description": "Third-party platforms for discovering and researching great portfolios — good for systematic browsing and filtering.",
+      "items": [
+        {
+          "name": "Bestfolios",
+          "url": "https://www.bestfolios.com/home",
+          "note": "Gallery of top-tier designer portfolios",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Wall of Portfolios",
+          "url": "https://www.wallofportfolios.in/?company=All",
+          "note": "Curated UX/UI portfolio showcase with category filtering",
+          "tier": 2,
+          "handle": null,
+          "bio": null
+        },
+        {
+          "name": "Open Doors",
+          "url": "https://opendoorscareers.com/portfolios",
+          "note": "Entry-level designer portfolio reference",
+          "tier": 1,
+          "handle": null,
+          "bio": null
+        }
+      ]
+    }
+  ]
+}

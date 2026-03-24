@@ -1,0 +1,45 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# build / cache
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# env (secrets)
+.env
+.env*.local
+
+# debug / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / OS
+.DS_Store
+*.pem
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Vercel
+.vercel
+
+# testing
+coverage/
+
+# misc
+*.local
+
+# Local IDE / agent tooling (not the Next.js app)
+.agents/
+.claude/
+.cursor/
+.kiro/
+skills/
+skills-lock.json
+**/Archive.zip
