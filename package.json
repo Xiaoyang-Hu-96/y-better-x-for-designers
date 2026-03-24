@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "csv-to-json": "node scripts/csv-to-json.js"
+    "csv-to-json": "node scripts/csv-to-json.js",
+    "patch:local-img": "node scripts/patch-local-img.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.100.0",

@@ -5,6 +5,7 @@ export interface ResourceItem {
   tier: 1 | 2;
   handle?: string | null;
   bio?: string | null;
+  /** Absolute image URL or site-relative path (e.g. `/preview.png`) for link preview */
   localImg?: string | null;
 }
 

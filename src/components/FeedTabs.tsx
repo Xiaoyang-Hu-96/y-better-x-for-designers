@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { TweetCard } from "./TweetCard";
-import { ScreenshotCard } from "./ScreenshotCard";
+import { TweetCard, ScreenshotCard } from "./TweetCard";
 import { ReplyCard } from "./ReplyCard";
 import type { Category, ResourceItem } from "@/types";
 import { getDomain, isXAccount } from "@/types";
@@ -65,7 +64,8 @@ const HOME_POSTS: HomePost[] = [
     url: "https://acctual.com",
     urlLabel: "acctual.com",
     urlTitle: "Acctual",
-    localImg: "/preview-acctual.png",
+    localImg:
+      "https://framerusercontent.com/images/Ke2f8nZyT9BXGQm3Kef9Y9XW0uo.png",
   },
   {
     text: "fun fact 2: a lot of the icons in my portfolio actually came from one place, thiings.co.\n\nThe whole collection has such a consistent visual style that I could drop them straight in without spending hours tweaking or regenerating in AI tools. Sometimes finding the right asset library saves more time than any workflow optimization.",
@@ -75,7 +75,7 @@ const HOME_POSTS: HomePost[] = [
     url: "https://thiings.co/things",
     urlLabel: "thiings.co",
     urlTitle: "Thiings",
-    localImg: "/preview-thiings.png",
+    localImg: "https://www.thiings.co/meta-new.png",
   },
 ];
 

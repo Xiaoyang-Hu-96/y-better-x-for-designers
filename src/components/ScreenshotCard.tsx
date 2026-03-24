@@ -66,6 +66,7 @@ export function ScreenshotCard({
                 style={{
                   position: "absolute",
                   inset: 0,
+                  zIndex: 1,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -85,11 +86,17 @@ export function ScreenshotCard({
               loading={eagerLoad ? "eager" : "lazy"}
               decoding="async"
               style={{
+                position: "absolute",
+                inset: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
                 objectPosition: "top",
-                display: loaded ? "block" : "none",
+                display: "block",
+                opacity: loaded ? 1 : 0,
+                transition: "opacity 0.22s ease-out",
+                zIndex: 2,
+                pointerEvents: "none",
               }}
               onLoad={() => setLoaded(true)}
               onError={() => setError(true)}

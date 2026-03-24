@@ -568,7 +568,8 @@
           "note": "A library of design details that feel like magic moments",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://designspells.com/og.png"
         },
         {
           "name": "Mobbin",
@@ -576,7 +577,8 @@
           "note": "The world's largest library of mobile & web UI screenshots — great for UX research and design reference",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://mobbin.com/og_image.png?v=4.0"
         },
         {
           "name": "Landingfolio",
@@ -584,7 +586,8 @@
           "note": "The best landing page inspiration collection out there",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://landingfolio.com/_nuxt/img/main.68a8f7f.png"
         },
         {
           "name": "awwwards",
@@ -592,7 +595,8 @@
           "note": "Daily picks of the most worth-seeing web design work",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://assets.awwwards.com/assets/images/pages/about-certificates/awwwards.jpg"
         },
         {
           "name": "FREAK MAG",
@@ -600,7 +604,8 @@
           "note": "Experimental visual design magazine",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://daytona2020.sakura.ne.jp/freak/cms/wp-content/themes/freakmag/assets/images/common/ogp.png"
         },
         {
           "name": "Making Software",
@@ -616,7 +621,8 @@
           "note": "Personal site of a Vercel design engineer — the details are insane",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://rauno.me/og4.png"
         },
         {
           "name": "Things Inc.",
@@ -624,7 +630,8 @@
           "note": "The Things app website — a masterclass in design detail",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://cdn.prod.website-files.com/66ea3a5528a044beafcf913e/673414b93c1fd7b39424c945_home.webp"
         },
         {
           "name": "Interface Craft",
@@ -632,7 +639,8 @@
           "note": "Reference for interface interaction details",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://interfacecraft.dev/images/og.png"
         },
         {
           "name": "Variant",
@@ -648,7 +656,8 @@
           "note": "The animation library — essential if you want to learn motion",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://gsap.com/GSAP-share-image.png"
         },
         {
           "name": "Spline",
@@ -656,7 +665,8 @@
           "note": "3D design tool that runs in the browser",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://spline.design/_next/static/media/spline_image_banner.77c2eb63.png"
         },
         {
           "name": "Unicorn Studio",
@@ -664,7 +674,8 @@
           "note": "No-code WebGL tool",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://www.unicorn.studio/images/ogg2.png"
         },
         {
           "name": "Neumorphism",
@@ -672,7 +683,8 @@
           "note": "CSS neumorphism shadow generator",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://neumorphism.io/ogImage.png"
         }
       ]
     },
@@ -687,7 +699,8 @@
           "note": "Animated UI components for React",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://reactbits.dev/og-pic.png"
         },
         {
           "name": "Magic UI",
@@ -695,7 +708,8 @@
           "note": "Beautiful motion components — great for landing pages",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://magicui.design/og"
         },
         {
           "name": "Aceternity UI",
@@ -703,7 +717,8 @@
           "note": "High-quality React component collection",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://ui.aceternity.com/banner.png"
         },
         {
           "name": "Fancy Components",
@@ -711,7 +726,8 @@
           "note": "Creative front-end component library",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://fancycomponents.dev/og.jpg"
         },
         {
           "name": "Uiverse",
@@ -727,7 +743,8 @@
           "note": "Neo-brutalist style components",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://www.neobrutalism.dev/preview.png"
         },
         {
           "name": "Neo Brutalism UI",
@@ -735,7 +752,8 @@
           "note": "Another neo-brutalist UI library",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://neo-brutalism-ui-library.vercel.app/neo-brutalism-ogp.jpg"
         },
         {
           "name": "CSS Buttons",
@@ -743,7 +761,8 @@
           "note": "A huge collection of CSS button styles",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://imagedelivery.net/KMb5EadhEKC1gAE0LkjL1g/cb814b9d-45f8-46f5-3108-91e511990200/public"
         },
         {
           "name": "FreeFrontend",
@@ -751,7 +770,8 @@
           "note": "Free front-end code snippets",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://freefrontend.com/logo.png"
         },
         {
           "name": "ui-layouts",
@@ -759,7 +779,8 @@
           "note": "UI layout references with code",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://www.ui-layouts.com/og.jpg"
         },
         {
           "name": "21st.dev",
@@ -767,7 +788,8 @@
           "note": "AI-assisted front-end component creation",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://21st.dev/opengraph-image.png?ef9fa01da2728a64"
         }
       ]
     },
@@ -782,7 +804,8 @@
           "note": "Framer component wiki and resources",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/UpHooSa4ddfhfbAzr5zJ5F9Tfc.jpg"
         },
         {
           "name": "framer.today",
@@ -806,7 +829,8 @@
           "note": "Free components and UI kits for Framer & Figma",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/nyd0tjQO5GGX3cbjqNuScyoqI0.png"
         },
         {
           "name": "Framer University",
@@ -814,7 +838,8 @@
           "note": "The go-to learning hub for everything Framer",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/6DJtJPu5YDuZV1hElqfn1Xp57wM.png"
         }
       ]
     },
@@ -829,7 +854,8 @@
           "note": "One of the best minimal portfolios I've seen",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/EOgjo7wp0arnNacVFqh7XvHAsM.png"
         },
         {
           "name": "Yubo Zhao",
@@ -837,7 +863,8 @@
           "note": "One of the best minimal portfolios I've seen",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/RXIi2xDbbhuQBrfe931by8ePts.png"
         },
         {
           "name": "Sujan Khadgi",
@@ -861,7 +888,8 @@
           "note": "A completely new pattern to browse case studies",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/nDGzQB3AJeashyNovFwC4m3rU.png"
         },
         {
           "name": "Daniel Sun",
@@ -869,7 +897,8 @@
           "note": "Strong distinctive visual style",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/vz2EiviE5cqupo3teGUSdFra0.png"
         },
         {
           "name": "Roman Tesliuk",
@@ -877,7 +906,8 @@
           "note": "So smooth it hurts",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/hv1gIJJoq4ZInJWUmOR4nhAQYRQ.png"
         },
         {
           "name": "Arshad Riyas",
@@ -885,7 +915,8 @@
           "note": "One of the best minimal portfolios I've seen",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/AWvZMxGdLkQS9XGAoc9uKysEoA.png"
         },
         {
           "name": "Liandong Zhou",
@@ -1100,7 +1131,8 @@
           "note": "Curated UX/UI portfolio showcase with category filtering",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://cdn.prod.website-files.com/65c14454c8e90beca1ee629a/67742e466cad467d16f6d301_wall%20of%20portfolios.png"
         },
         {
           "name": "Open Doors",
@@ -1108,7 +1140,8 @@
           "note": "Entry-level designer portfolio reference",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://storage.googleapis.com/gpt-engineer-file-uploads/ALPFWLhZZdQKkJJcGN9TgBEfvwD2/social-images/social-1772205363048-open_graph.webp"
         }
       ]
     }

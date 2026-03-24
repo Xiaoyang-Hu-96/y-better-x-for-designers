@@ -4,6 +4,9 @@ import { useState, useEffect, useMemo } from "react";
 import { ResourceItem, isXAccount, getDomain } from "@/types";
 import { ScreenshotCard } from "./ScreenshotCard";
 
+/** Re-export so parents can import preview + card from one module (avoids duplicate Webpack entry edges). */
+export { ScreenshotCard };
+
 const COLORS = ["#1d9bf0", "#00ba7c", "#ff7a00", "#f91880", "#7856ff"];
 const LIKES_KEY = "design-resources-likes";
 
