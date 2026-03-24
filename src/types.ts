@@ -5,7 +5,10 @@ export interface ResourceItem {
   tier: 1 | 2;
   handle?: string | null;
   bio?: string | null;
-  /** Absolute image URL or site-relative path (e.g. `/preview.png`) for link preview */
+  /**
+   * Link cards: preview image (absolute URL or `/…` under public).
+   * X account rows: profile avatar — same shape; falls back to Unavatar if missing or broken.
+   */
   localImg?: string | null;
 }
 

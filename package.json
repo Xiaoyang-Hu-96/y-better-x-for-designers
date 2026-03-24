@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "csv-to-json": "node scripts/csv-to-json.js",
-    "patch:local-img": "node scripts/patch-local-img.mjs"
+    "patch:local-img": "node scripts/patch-local-img.mjs",
+    "fetch:x-avatars": "node scripts/fetch-x-avatars.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.100.0",

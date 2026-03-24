@@ -327,6 +327,9 @@ function ActionBar({
 // ── X Account profile card ──
 function XProfileCard({ item }: { item: ResourceItem }) {
   const handle = item.handle?.replace("@", "") ?? "";
+  /** For X rows, `localImg` is the profile photo (path under /public or absolute URL). */
+  const localAvatar = item.localImg?.trim() ?? "";
+  const [localFailed, setLocalFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [bust, setBust] = useState(0);
   const [avatarLoaded, setAvatarLoaded] = useState(false);
@@ -336,16 +339,19 @@ function XProfileCard({ item }: { item: ResourceItem }) {
   useEffect(() => {
     setAttempt(0);
     setBust(0);
+    setLocalFailed(false);
     setAvatarLoaded(false);
     setAvatarFailed(false);
-  }, [handle]);
+  }, [handle, localAvatar]);
 
   const avatarSrc = useMemo(() => {
-    if (!handle || avatarFailed) return "";
+    if (avatarFailed) return "";
+    if (localAvatar && !localFailed) return localAvatar;
+    if (!handle) return "";
     if (attempt === 0) return `https://unavatar.io/twitter/${handle}`;
     if (attempt === 1) return `https://unavatar.io/x/${handle}`;
     return `https://unavatar.io/twitter/${handle}?retry=${bust}`;
-  }, [handle, attempt, bust, avatarFailed]);
+  }, [handle, localAvatar, localFailed, attempt, bust, avatarFailed]);
 
   useEffect(() => {
     if (!avatarSrc) return;
@@ -353,6 +359,13 @@ function XProfileCard({ item }: { item: ResourceItem }) {
   }, [avatarSrc]);
 
   const onAvatarError = () => {
+    if (localAvatar && !localFailed) {
+      setLocalFailed(true);
+      setAttempt(0);
+      setBust(0);
+      setAvatarLoaded(false);
+      return;
+    }
     if (attempt === 0) setAttempt(1);
     else if (attempt === 1) {
       setBust(Date.now());
@@ -431,7 +444,7 @@ function XProfileCard({ item }: { item: ResourceItem }) {
               />
             )}
             <img
-              key={`${handle}-${attempt}-${bust}`}
+              key={`${avatarSrc}-${attempt}-${bust}-${localFailed}`}
               src={avatarSrc}
               alt=""
               width={48}
