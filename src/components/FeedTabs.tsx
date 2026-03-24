@@ -662,11 +662,11 @@ export function FeedTabs({
                       __html: post.text.replace(/\n/g, "<br>"),
                     }}
                   />
-                  {post.url && post.urlTitle && post.urlLabel && (
+                  {post.url && (
                     <ScreenshotCard
                       url={post.url}
-                      domain={post.urlLabel}
-                      title={post.urlTitle}
+                      domain={post.urlLabel ?? getDomain(post.url)}
+                      title={post.urlTitle ?? post.urlLabel ?? getDomain(post.url)}
                       localImg={post.localImg}
                       previewOrderIndex={linkPreviewsBefore}
                     />

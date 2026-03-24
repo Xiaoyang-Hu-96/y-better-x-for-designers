@@ -377,6 +377,7 @@ function XProfileCard({ item }: { item: ResourceItem }) {
     >
       {/* Avatar */}
       <div
+        aria-busy={Boolean(handle && !avatarFailed && !avatarLoaded)}
         style={{
           position: "relative",
           width: 48,
