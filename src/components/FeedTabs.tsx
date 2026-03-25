@@ -492,6 +492,19 @@ export function FeedTabs({
         sorted.splice(pin.position, 0, item);
       }
     }
+    /** Keep Bao To directly under the Sponsored (xiaoyanghu) row — tier sort would leave it at list end. */
+    if (activeListCat.id === "portfolio-inspiration") {
+      const baoIdx = sorted.findIndex((item) => /baothiento\.com/i.test(item.url));
+      if (baoIdx !== -1) {
+        const [bao] = sorted.splice(baoIdx, 1);
+        const ownIdx = sorted.findIndex((item) => /xiaoyanghu\.com/i.test(item.url));
+        if (ownIdx !== -1) {
+          sorted.splice(ownIdx + 1, 0, bao);
+        } else {
+          sorted.push(bao);
+        }
+      }
+    }
     return sorted;
   }, [activeListCat]);
 
