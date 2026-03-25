@@ -1,7 +1,8 @@
 /**
  * Canonical site URL and subdirectory (basePath) from env.
- * Set on Vercel: NEXT_PUBLIC_SITE_URL=https://xiaoyanghu.com/your-path
- * (no trailing slash). Local dev: omit or use http://localhost:3000
+ * Set on Vercel Production: NEXT_PUBLIC_SITE_URL=https://y-design-feed.vercel.app (or your custom domain)
+ * so OG/metadata use the stable host, not deployment-specific VERCEL_URL.
+ * Subpath example: https://example.com/library — no trailing slash. Local: omit or http://localhost:3000
  */
 
 function pathnameFromSiteUrl(): string {
