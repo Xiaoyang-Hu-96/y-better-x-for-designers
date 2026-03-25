@@ -1,8 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { withBasePath } from "@/lib/site-url";
 
-const PREVIEW_HIGH_PRIORITY_COUNT = 5;
+/** First N link previews per list: eager load + fetchPriority high (align with ~1 screen of cards). */
+export const PREVIEW_HIGH_PRIORITY_COUNT = 9;
+/** If the image never fires load/error (stalled CDN, lazy quirks), fall back */
+const PREVIEW_STALL_MS = 13000;
+
+function microlinkScreenshotUrl(pageUrl: string): string {
+  const q = new URLSearchParams();
+  q.set("url", pageUrl);
+  q.set("screenshot", "true");
+  q.set("meta", "false");
+  q.set("embed", "screenshot.url");
+  q.set("viewport.width", "720");
+  q.set("viewport.height", "377");
+  q.set("viewport.deviceScaleFactor", "1");
+  return `https://api.microlink.io/?${q.toString()}`;
+}
 
 export function ScreenshotCard({
   url,
@@ -23,17 +39,30 @@ export function ScreenshotCard({
 }) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
+  const [fallbackMicrolink, setFallbackMicrolink] = useState(false);
 
-  const screenshotSrc = localImg
-    ? localImg
-    : `https://api.microlink.io/?url=${encodeURIComponent(
-        url
-      )}&screenshot=true&meta=false&embed=screenshot.url`;
+  const microlinkSrc = useMemo(() => microlinkScreenshotUrl(url), [url]);
+
+  const screenshotSrc =
+    localImg && !fallbackMicrolink ? localImg : microlinkSrc;
 
   useEffect(() => {
     setLoaded(false);
     setError(false);
   }, [screenshotSrc]);
+
+  useEffect(() => {
+    setFallbackMicrolink(false);
+  }, [localImg, url]);
+
+  useEffect(() => {
+    if (loaded || error) return;
+    const id = window.setTimeout(() => {
+      if (localImg && !fallbackMicrolink) setFallbackMicrolink(true);
+      else setError(true);
+    }, PREVIEW_STALL_MS);
+    return () => window.clearTimeout(id);
+  }, [screenshotSrc, localImg, fallbackMicrolink, loaded, error]);
 
   const resolvedPriority =
     fetchPriority !== "auto"
@@ -42,7 +71,16 @@ export function ScreenshotCard({
         ? "high"
         : "auto";
 
-  const eagerLoad = resolvedPriority === "high";
+  /** External og URLs + first N previews: avoid lazy + scroll-container edge cases */
+  const eagerLoad = Boolean(localImg) || resolvedPriority === "high";
+
+  const onImgError = () => {
+    if (localImg && !fallbackMicrolink) {
+      setFallbackMicrolink(true);
+      return;
+    }
+    setError(true);
+  };
 
   return (
     <div style={{ marginBottom: 10 }}>
@@ -67,6 +105,7 @@ export function ScreenshotCard({
                   position: "absolute",
                   inset: 0,
                   zIndex: 1,
+                  pointerEvents: "none",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -80,8 +119,10 @@ export function ScreenshotCard({
               </div>
             )}
             <img
-              src={screenshotSrc}
+              key={screenshotSrc}
+              src={withBasePath(screenshotSrc)}
               alt=""
+              referrerPolicy="no-referrer"
               fetchPriority={resolvedPriority === "high" ? "high" : undefined}
               loading={eagerLoad ? "eager" : "lazy"}
               decoding="async"
@@ -99,7 +140,7 @@ export function ScreenshotCard({
                 pointerEvents: "none",
               }}
               onLoad={() => setLoaded(true)}
-              onError={() => setError(true)}
+              onError={onImgError}
             />
           </>
         ) : (
@@ -118,12 +159,14 @@ export function ScreenshotCard({
           </div>
         )}
 
-        {(loaded || error) && (
+        {/* Show during load too — previously only when loaded||error, so lazy/slow previews had no chip */}
+        {!error && (
           <div
             style={{
               position: "absolute",
               bottom: 10,
               left: 10,
+              zIndex: 3,
               background: "rgba(0,0,0,0.77)",
               color: "#fff",
               fontSize: 13,

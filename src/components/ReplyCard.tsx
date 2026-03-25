@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { withBasePath } from "@/lib/site-url";
 
 const ME = {
   name: "Elena Hu",
@@ -45,7 +46,7 @@ export function ReplyCard({
         >
           {!avatarError ? (
             <img
-              src={ME.avatar}
+              src={withBasePath(ME.avatar)}
               alt={ME.name}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
               onError={() => setAvatarError(true)}

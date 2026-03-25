@@ -6,8 +6,22 @@
   padding: 0;
 }
 
+html {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 body {
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Safari / UA defaults use system UI for controls; keep the same stack as body */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 .btn-press:active {
@@ -96,5 +110,13 @@ body {
   }
   .mobile-bottomnav {
     display: flex;
+  }
+}
+
+/* Hard-hide mobile chrome on desktop (avoids duplicate Y logo / top bar with sidebar) */
+@media (min-width: 768px) {
+  .mobile-topbar,
+  .mobile-bottomnav {
+    display: none !important;
   }
 }

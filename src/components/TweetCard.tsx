@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { ResourceItem, isXAccount, getDomain } from "@/types";
+import { UI_SANS } from "@/lib/ui-font";
+import { withBasePath } from "@/lib/site-url";
 import { ScreenshotCard } from "./ScreenshotCard";
 
 /** Re-export so parents can import preview + card from one module (avoids duplicate Webpack entry edges). */
@@ -386,6 +388,7 @@ function XProfileCard({ item }: { item: ResourceItem }) {
         borderBottom: "none",
         textDecoration: "none",
         color: "inherit",
+        fontFamily: UI_SANS,
         transition: "background 0.1s",
       }}
       onMouseEnter={(e) => (e.currentTarget.style.background = "#f7f9f9")}
@@ -445,7 +448,7 @@ function XProfileCard({ item }: { item: ResourceItem }) {
             )}
             <img
               key={`${avatarSrc}-${attempt}-${bust}-${localFailed}`}
-              src={avatarSrc}
+              src={withBasePath(avatarSrc)}
               alt=""
               width={48}
               height={48}
@@ -574,6 +577,7 @@ export function TweetCard({
         transition: "background 0.1s",
         textDecoration: "none",
         color: "inherit",
+        fontFamily: UI_SANS,
       }}
       onMouseEnter={(e) => (e.currentTarget.style.background = "#f7f9f9")}
       onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}

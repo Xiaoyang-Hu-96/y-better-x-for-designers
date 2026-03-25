@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:3010": "next dev -p 3010",
     "dev:turbo": "next dev --turbopack",
+    "dev:turbo:3010": "next dev --turbopack -p 3010",
     "dev:clean": "rm -rf .next && next dev",
     "dev:clean:turbo": "rm -rf .next && next dev --turbopack",
     "build": "next build",

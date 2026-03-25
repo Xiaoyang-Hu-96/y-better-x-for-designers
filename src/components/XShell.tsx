@@ -6,6 +6,8 @@ import { SuggestModal } from "./SuggestModal";
 import { PollCard } from "./PollCard";
 import type { Category } from "@/types";
 import dataJson from "@/lib/data.json";
+import { UI_SANS } from "@/lib/ui-font";
+import { withBasePath } from "@/lib/site-url";
 
 const CATEGORIES: Category[] = (dataJson as { categories: Category[] }).categories ?? [];
 
@@ -130,6 +132,59 @@ export function XShell() {
   const accountPopoverRef = useRef<HTMLDivElement>(null);
   const accountFirstMenuItemRef = useRef<HTMLAnchorElement>(null);
 
+  /** Do not mount mobile chrome on desktop — avoids overlap if CSS loses specificity. */
+  const [isMobileNarrow, setIsMobileNarrow] = useState(false);
+  useLayoutEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const sync = () => setIsMobileNarrow(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  // #region agent log
+  useEffect(() => {
+    const gf = (el: Element | null | undefined) =>
+      el ? getComputedStyle(el).fontFamily : null;
+    const html = document.documentElement;
+    const interVar = getComputedStyle(html).getPropertyValue("--font-inter");
+    const chip = document.querySelector(
+      ".feed-main div[style*='rgba(0, 0, 0, 0.77)'], .feed-main div[style*='rgba(0,0,0,0.77)']"
+    );
+    const data = {
+      bodyFont: gf(document.body),
+      htmlClass: html.className,
+      bodyClass: document.body.className,
+      interVarHead: (interVar || "").trim().slice(0, 160),
+      shellFont: gf(document.querySelector(".shell-root")),
+      feedFont: gf(document.querySelector(".feed-main")),
+      navBtnFont: gf(document.querySelector(".sidebar-left button")),
+      previewChipFont: gf(chip),
+    };
+    const payload = {
+      sessionId: "f383a1",
+      location: "XShell.tsx:FontDebugProbe",
+      message: "computed fonts",
+      data,
+      timestamp: Date.now(),
+      hypothesisId: "H1-H5",
+    };
+    fetch("http://127.0.0.1:7508/ingest/8d9099a7-4a77-4c9f-a1f1-5b7e491cf96d", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Debug-Session-Id": "f383a1",
+      },
+      body: JSON.stringify(payload),
+    }).catch(() => {});
+    fetch(withBasePath("/api/agent-debug-log"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch(() => {});
+  }, []);
+  // #endregion agent log
+
   const updateAccountMenuPlacement = useCallback(() => {
     const el = accountTriggerRef.current;
     if (!el) return;
@@ -225,8 +280,13 @@ export function XShell() {
 
   const copyFollowAll = useCallback(() => {
     const xCat = categories.find((c) => c.id === "x-bloggers");
-    const handles = xCat?.items.map((i) => i.handle).filter(Boolean).join(" ") ?? "";
-    const prompt = `I want to follow a list of designers on X (Twitter). Please help me follow all of them one by one using your browser tools.\n\nHere are all the handles:\n${handles}\n\nPlease go to each profile on x.com and click the Follow button. Work through the list in order.`;
+    const handles = xCat?.items.map((i) => i.handle).filter(Boolean).join("\n") ?? "";
+    const prompt = `I want to follow every account in this curated X (Twitter) list. Use your browser tools: for each handle below, open https://x.com/ plus the username with the @ removed, then click Follow only if I'm not already following. Work top to bottom; skip profiles that already show Following.
+
+Handles (one per line):
+${handles}
+
+When done, briefly say how many new follows you made vs. already following.`;
     navigator.clipboard.writeText(prompt).then(() => {
       setShowToast(true);
       setTimeout(() => setShowToast(false), 4000);
@@ -242,10 +302,11 @@ export function XShell() {
         overflow: "hidden",
         background: "#ffffff",
         color: "#0f1419",
-        fontFamily: "inherit",
+        fontFamily: UI_SANS,
       }}
     >
-      {/* ── Mobile top bar (hidden on desktop) ── */}
+      {/* ── Mobile top bar (only mounted ≤767px) ── */}
+      {isMobileNarrow ? (
       <div className="mobile-topbar">
         <div
           style={{
@@ -258,7 +319,7 @@ export function XShell() {
           }}
         >
           <img
-            src="/avatar.jpg"
+            src={withBasePath("/avatar.jpg")}
             alt="Elena Hu"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             onError={(e) => {
@@ -266,7 +327,7 @@ export function XShell() {
             }}
           />
         </div>
-        <img src="/ylogo.png" alt="Y" width={24} height={24} style={{ objectFit: "contain" }} />
+        <img src={withBasePath("/ylogo.png")} alt="Y" width={24} height={24} style={{ objectFit: "contain" }} />
         <button
           onClick={() => setSuggestOpen(true)}
           aria-label="Suggest new resource"
@@ -290,6 +351,7 @@ export function XShell() {
           </svg>
         </button>
       </div>
+      ) : null}
 
       {/* ── Left sidebar ── */}
       <div
@@ -324,7 +386,7 @@ export function XShell() {
               justifyContent: "center",
             }}
           >
-            <img src="/ylogo.png" alt="Y" width={32} height={32} style={{ objectFit: "contain" }} />
+            <img src={withBasePath("/ylogo.png")} alt="Y" width={32} height={32} style={{ objectFit: "contain" }} />
           </div>
         </div>
 
@@ -568,7 +630,7 @@ export function XShell() {
               }}
             >
               <img
-                src="/avatar.jpg"
+                src={withBasePath("/avatar.jpg")}
                 alt="Elena Hu"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 onError={(e) => {
@@ -902,7 +964,8 @@ export function XShell() {
         <div style={{ fontSize: 13, color: "#536471", paddingBottom: 16 }}>© 2026 Xiaoyang Hu</div>
       </div>
 
-      {/* ── Mobile bottom nav (hidden on desktop) ── */}
+      {/* ── Mobile bottom nav (only mounted ≤767px) ── */}
+      {isMobileNarrow ? (
       <nav className="mobile-bottomnav" aria-label="Main navigation">
         {/* Home */}
         <button
@@ -1005,6 +1068,7 @@ export function XShell() {
           );
         })}
       </nav>
+      ) : null}
 
       {/* Toast */}
       {showToast && (
@@ -1025,7 +1089,7 @@ export function XShell() {
             whiteSpace: "nowrap",
           }}
         >
-          Prompt copied ✦ Paste it into Claude or a browser agent to auto-follow everyone
+          Prompt copied ✦ Paste into a browser-capable agent to follow everyone on the list
         </div>
       )}
 

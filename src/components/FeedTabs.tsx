@@ -1,7 +1,11 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import type { CSSProperties } from "react";
+import { UI_SANS } from "@/lib/ui-font";
+import { withBasePath } from "@/lib/site-url";
 import { TweetCard, ScreenshotCard } from "./TweetCard";
+import { PREVIEW_HIGH_PRIORITY_COUNT } from "./ScreenshotCard";
 import { ReplyCard } from "./ReplyCard";
 import type { Category, ResourceItem } from "@/types";
 import { getDomain, isXAccount } from "@/types";
@@ -64,8 +68,7 @@ const HOME_POSTS: HomePost[] = [
     url: "https://acctual.com",
     urlLabel: "acctual.com",
     urlTitle: "Acctual",
-    localImg:
-      "https://framerusercontent.com/images/Ke2f8nZyT9BXGQm3Kef9Y9XW0uo.png",
+    localImg: "/previews/acctual.png",
   },
   {
     text: "fun fact 2: a lot of the icons in my portfolio actually came from one place, thiings.co.\n\nThe whole collection has such a consistent visual style that I could drop them straight in without spending hours tweaking or regenerating in AI tools. Sometimes finding the right asset library saves more time than any workflow optimization.",
@@ -75,7 +78,7 @@ const HOME_POSTS: HomePost[] = [
     url: "https://thiings.co/things",
     urlLabel: "thiings.co",
     urlTitle: "Thiings",
-    localImg: "https://www.thiings.co/meta-new.png",
+    localImg: "/previews/thiings.png",
   },
 ];
 
@@ -151,6 +154,12 @@ const YAPPING_POSTS: HomePost[] = [
   },
 ];
 
+/** Pin order for design-inspiration list (matches previous inline behavior). */
+const RESOURCE_PREVIEW_PINS: { url: string; position: number }[] = [
+  { url: "https://www.unicorn.studio/", position: 1 },
+  { url: "https://www.interfacecraft.dev/", position: 2 },
+];
+
 const ME = {
   name: "Elena Hu",
   handle: "@elenahuxy",
@@ -158,6 +167,8 @@ const ME = {
   initials: "XY",
   avatar: "/avatar.jpg",
 };
+
+const FEED_SANS: CSSProperties["fontFamily"] = UI_SANS;
 
 const LIKES_KEY = "design-resources-likes";
 
@@ -340,7 +351,7 @@ function ClampedText({ text, maxLines = 4 }: { text: string; maxLines?: number }
   }, [text, measure]);
 
   return (
-    <div style={{ padding: "4px 16px 6px" }}>
+    <div style={{ padding: "4px 16px 6px", fontFamily: FEED_SANS }}>
       <div
         ref={ref}
         style={{
@@ -348,6 +359,7 @@ function ClampedText({ text, maxLines = 4 }: { text: string; maxLines?: number }
           color: "#536471",
           lineHeight: 1.5,
           whiteSpace: "pre-line",
+          fontFamily: FEED_SANS,
           ...(!expanded && clamped
             ? {
                 display: "-webkit-box",
@@ -371,6 +383,7 @@ function ClampedText({ text, maxLines = 4 }: { text: string; maxLines?: number }
             cursor: "pointer",
             padding: "4px 0 0",
             fontWeight: 400,
+            fontFamily: FEED_SANS,
           }}
         >
           {expanded ? "Show less" : "Show more"}
@@ -421,6 +434,83 @@ export function FeedTabs({
     setPortfolioSubTab("sites");
   }, [activeCategory]);
 
+  useEffect(() => {
+    setLightboxImg(null);
+  }, [mode]);
+
+  useEffect(() => {
+    if (!lightboxImg) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxImg(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxImg]);
+
+  const navCat = categories[activeCategory];
+  const isPortfolioNav = navCat?.id === "portfolio-inspiration";
+  const isXBloggersNav = navCat?.id === "x-bloggers";
+  const platformCategory = categories.find((c) => c.id === "portfolio-platforms");
+  const activeListCat =
+    isPortfolioNav && portfolioSubTab === "platform" ? platformCategory : navCat;
+
+  const sortedResourceItems = useMemo(() => {
+    if (!activeListCat) return [];
+    const sorted = [...activeListCat.items].sort((a, b) => {
+      const rank = (item: { tier: number; handle?: string | null }) => {
+        if (item.tier === 1) return 0;
+        if (item.handle === "@elenahuxy") return 0.5;
+        return 1;
+      };
+      return rank(a) - rank(b);
+    });
+    for (const pin of RESOURCE_PREVIEW_PINS) {
+      const idx = sorted.findIndex((item) => item.url === pin.url);
+      if (idx !== -1 && idx !== pin.position) {
+        const [item] = sorted.splice(idx, 1);
+        sorted.splice(pin.position, 0, item);
+      }
+    }
+    return sorted;
+  }, [activeListCat]);
+
+  const displayResourceItems = useMemo(() => {
+    const q = resourceSearch.trim();
+    if (!q) return sortedResourceItems;
+    return sortedResourceItems.filter((item) => resourceMatchesQuery(item, resourceSearch));
+  }, [sortedResourceItems, resourceSearch]);
+
+  useEffect(() => {
+    const urls =
+      mode === "resources"
+        ? displayResourceItems
+            .filter((it) => !isXAccount(it))
+            .map((it) => it.localImg?.trim())
+            .filter((u): u is string => Boolean(u))
+            .slice(PREVIEW_HIGH_PRIORITY_COUNT, PREVIEW_HIGH_PRIORITY_COUNT + 24)
+        : [...HOME_POSTS, ...YAPPING_POSTS]
+            .map((p) => p.localImg?.trim())
+            .filter((u): u is string => Boolean(u))
+            .slice(2, 18);
+
+    if (urls.length === 0) return;
+
+    const run = () => {
+      for (const src of urls) {
+        const img = new Image();
+        img.src = withBasePath(src);
+      }
+    };
+
+    const ric = window.requestIdleCallback;
+    if (typeof ric === "function") {
+      const id = ric(run, { timeout: 2500 });
+      return () => window.cancelIdleCallback?.(id);
+    }
+    const t = window.setTimeout(run, 400);
+    return () => window.clearTimeout(t);
+  }, [mode, displayResourceItems, activeCategory, portfolioSubTab]);
+
   // ── HOME VIEW ──
   if (mode === "home") {
     const homePostsFiltered = HOME_POSTS.filter((p) => homePostMatchesQuery(p, resourceSearch));
@@ -437,6 +527,7 @@ export function FeedTabs({
             backdropFilter: "blur(12px)",
             borderBottom: "1px solid #eff3f4",
             zIndex: 10,
+            fontFamily: FEED_SANS,
           }}
         >
           <div
@@ -445,23 +536,33 @@ export function FeedTabs({
               fontSize: 24,
               fontWeight: 800,
               color: "#0f1419",
+              fontFamily: FEED_SANS,
             }}
           >
             Welcome to Y!
           </div>
           <div
-            style={{ padding: "2px 16px 0", fontSize: 15, color: "#536471", whiteSpace: "pre-line" }}
+            style={{
+              padding: "2px 16px 0",
+              fontSize: 15,
+              color: "#536471",
+              whiteSpace: "pre-line",
+              fontFamily: FEED_SANS,
+            }}
           >
             X, but your feed is actually useful.{"\n"}How I built a portfolio people actually notice, and every resource that helped.
           </div>
           {!homeBannerDismissed && (
-            <div style={{
-              margin: "10px 16px 0",
-              background: "#d4f0e0",
-              borderRadius: 16,
-              padding: "16px 20px",
-              position: "relative",
-            }}>
+            <div
+              style={{
+                margin: "10px 16px 0",
+                background: "#d4f0e0",
+                borderRadius: 16,
+                padding: "16px 20px",
+                position: "relative",
+                fontFamily: FEED_SANS,
+              }}
+            >
               <button
                 onClick={() => setHomeBannerDismissed(true)}
                 style={{
@@ -491,7 +592,7 @@ export function FeedTabs({
               </div>
             </div>
           )}
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", fontFamily: FEED_SANS }}>
             <div
               style={{
                 ...subTabRowItemStyle(homeSubTab === "buildlog"),
@@ -565,7 +666,7 @@ export function FeedTabs({
                       color: "#536471",
                     }}
                   >
-                    <img src="/pinned.svg" alt="" style={{ width: 16, height: 16 }} />
+                    <img src={withBasePath("/pinned.svg")} alt="" style={{ width: 16, height: 16 }} />
                     Pinned
                   </div>
                 )}
@@ -595,7 +696,7 @@ export function FeedTabs({
                       overflow: "hidden",
                     }}
                   >
-                    <img src={ME.avatar} alt={ME.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    <img src={withBasePath(ME.avatar)} alt={ME.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   </div>
                   {i < HOME_POSTS.length - 1 && (
                     <div
@@ -657,6 +758,7 @@ export function FeedTabs({
                       lineHeight: 1.5,
                       color: "#0f1419",
                       marginBottom: 10,
+                      fontFamily: FEED_SANS,
                     }}
                     dangerouslySetInnerHTML={{
                       __html: post.text.replace(/\n/g, "<br>"),
@@ -699,7 +801,7 @@ export function FeedTabs({
             }}
           >
             <img
-              src={lightboxImg}
+              src={withBasePath(lightboxImg)}
               alt=""
               style={{
                 maxWidth: "90vw",
@@ -768,7 +870,7 @@ export function FeedTabs({
                         overflow: "hidden",
                       }}
                     >
-                      <img src={ME.avatar} alt={ME.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      <img src={withBasePath(ME.avatar)} alt={ME.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                     {i < YAPPING_POSTS.length - 1 && (
                       <div
@@ -809,6 +911,7 @@ export function FeedTabs({
                         lineHeight: 1.5,
                         color: "#0f1419",
                         marginBottom: 10,
+                        fontFamily: FEED_SANS,
                       }}
                       dangerouslySetInnerHTML={{
                         __html: post.text.replace(/\n/g, "<br>"),
@@ -824,7 +927,7 @@ export function FeedTabs({
                         }}
                       >
                         <img
-                          src={post.images[0]}
+                          src={withBasePath(post.images[0])}
                           alt=""
                           onClick={(e) => { e.stopPropagation(); setLightboxImg(post.images![0]); }}
                           style={{
@@ -852,7 +955,7 @@ export function FeedTabs({
                         {post.images.map((img, j) => (
                           <img
                             key={j}
-                            src={img}
+                            src={withBasePath(img)}
                             alt=""
                             onClick={(e) => { e.stopPropagation(); setLightboxImg(img); }}
                             style={{
@@ -879,7 +982,7 @@ export function FeedTabs({
                         }}
                       >
                         <img
-                          src={post.images[0]}
+                          src={withBasePath(post.images[0])}
                           alt=""
                           onClick={(e) => { e.stopPropagation(); setLightboxImg(post.images![0]); }}
                           style={{
@@ -892,7 +995,7 @@ export function FeedTabs({
                         />
                         <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 2, minWidth: 0 }}>
                           <img
-                            src={post.images[1]}
+                            src={withBasePath(post.images[1])}
                             alt=""
                             onClick={(e) => { e.stopPropagation(); setLightboxImg(post.images![1]); }}
                             style={{
@@ -905,7 +1008,7 @@ export function FeedTabs({
                             }}
                           />
                           <img
-                            src={post.images[2]}
+                            src={withBasePath(post.images[2])}
                             alt=""
                             onClick={(e) => { e.stopPropagation(); setLightboxImg(post.images![2]); }}
                             style={{
@@ -936,51 +1039,26 @@ export function FeedTabs({
   }
 
   // ── RESOURCES VIEW ──
-  const cat = categories[activeCategory];
-  const isPortfolio = cat?.id === "portfolio-inspiration";
-  const isXBloggers = cat?.id === "x-bloggers";
-  const platformCat = categories.find((c) => c.id === "portfolio-platforms");
-
   const copyFollowAll = () => {
-    const handles = categories.find((c) => c.id === "x-bloggers")?.items.map((i) => i.handle).filter(Boolean).join(" ") ?? "";
-    const prompt = `I want to follow a list of designers on X (Twitter). Please help me follow all of them one by one using your browser tools.\n\nHere are all the handles:\n${handles}\n\nPlease go to each profile on x.com and click the Follow button. Work through the list in order.`;
+    const handles =
+      categories
+        .find((c) => c.id === "x-bloggers")
+        ?.items.map((i) => i.handle)
+        .filter(Boolean)
+        .join("\n") ?? "";
+    const prompt = `I want to follow every account in this curated X (Twitter) list. Use your browser tools: for each handle below, open https://x.com/ plus the username with the @ removed, then click Follow only if I'm not already following. Work top to bottom; skip profiles that already show Following.
+
+Handles (one per line):
+${handles}
+
+When done, briefly say how many new follows you made vs. already following.`;
     navigator.clipboard.writeText(prompt).then(() => {
       setBannerToast(true);
       setTimeout(() => setBannerToast(false), 4000);
     });
   };
 
-  const activeCat = isPortfolio && portfolioSubTab === "platform" ? platformCat : cat;
-
-  const PINNED: { url: string; position: number }[] = [
-    { url: "https://www.unicorn.studio/", position: 1 },
-    { url: "https://www.interfacecraft.dev/", position: 2 },
-  ];
-
-  const sortedItems = (() => {
-    if (!activeCat) return [];
-    const sorted = [...activeCat.items].sort((a, b) => {
-      const rank = (item: { tier: number; handle?: string | null }) => {
-        if (item.tier === 1) return 0;
-        if (item.handle === "@elenahuxy") return 0.5;
-        return 1;
-      };
-      return rank(a) - rank(b);
-    });
-    for (const pin of PINNED) {
-      const idx = sorted.findIndex((item) => item.url === pin.url);
-      if (idx !== -1 && idx !== pin.position) {
-        const [item] = sorted.splice(idx, 1);
-        sorted.splice(pin.position, 0, item);
-      }
-    }
-    return sorted;
-  })();
-
-  const searchActive = resourceSearch.trim().length > 0;
-  const displayItems = searchActive
-    ? sortedItems.filter((item) => resourceMatchesQuery(item, resourceSearch))
-    : sortedItems;
+  const resourceSearchActive = resourceSearch.trim().length > 0;
 
   return (
     <>
@@ -991,6 +1069,7 @@ export function FeedTabs({
           background: "rgba(255,255,255,0.85)",
           backdropFilter: "blur(12px)",
           zIndex: 10,
+          fontFamily: FEED_SANS,
         }}
       >
         <div
@@ -999,21 +1078,22 @@ export function FeedTabs({
             fontSize: 24,
             fontWeight: 800,
             color: "#0f1419",
+            fontFamily: FEED_SANS,
           }}
         >
-          {cat?.label || "Resources"}
+          {navCat?.label || "Resources"}
         </div>
-        {cat?.description && !isPortfolio && (
-          <ClampedText key={cat.id} text={cat.description} />
+        {navCat?.description && !isPortfolioNav && (
+          <ClampedText key={navCat.id} text={navCat.description} />
         )}
-        {isPortfolio && (
+        {isPortfolioNav && (
           <ClampedText
             key="portfolio-desc"
             text={"Hot take: if a portfolio looks impossibly well-designed to you, you probably haven't seen enough yet.\n\nDesign is fundamentally about combining elements in a clever way. Once you recognize the patterns, building your own starts feeling like a puzzle you already know how to solve."}
           />
         )}
-        {isPortfolio && (
-          <div role="tablist" style={{ display: "flex" }}>
+        {isPortfolioNav && (
+          <div role="tablist" style={{ display: "flex", fontFamily: FEED_SANS }}>
             <button
               role="tab"
               aria-selected={portfolioSubTab === "sites"}
@@ -1060,13 +1140,14 @@ export function FeedTabs({
         )}
 
         {/* Follow all banner for X Accounts */}
-        {isXBloggers && !bannerDismissed && (
+        {isXBloggersNav && !bannerDismissed && (
         <div style={{
           margin: "8px 16px 0",
           background: "#d4f0e0",
           borderRadius: 16,
           padding: "16px 20px",
           position: "relative",
+          fontFamily: FEED_SANS,
         }}>
           <button
             aria-label="Dismiss"
@@ -1088,10 +1169,10 @@ export function FeedTabs({
           </button>
           <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 20, fontWeight: 700, color: "#0f1419", marginBottom: 8, lineHeight: 1.3, paddingRight: 28, textWrap: "balance" } as React.CSSProperties}>
             Follow all in one prompt
-            <img src="/follow.svg" alt="" style={{ width: 20, height: 20 }} />
+            <img src={withBasePath("/follow.svg")} alt="" style={{ width: 20, height: 20 }} />
           </div>
           <div style={{ fontSize: 15, color: "#536471", marginBottom: 16, lineHeight: 1.5, textWrap: "pretty" } as React.CSSProperties}>
-            Copy the prompt and paste it into Claude or any browser AI agent. It will follow everyone for you. Or{" "}
+            Copy the prompt and paste it into Claude or any browser-capable AI. The text always includes every account listed on this page—copy again after you add new people here. Or{" "}
             <a
               href="https://x.com/i/lists/2035576127285325952?s=20"
               target="_blank"
@@ -1100,7 +1181,7 @@ export function FeedTabs({
             >
               follow the X List
             </a>
-            {" "}(subscribes to the feed, not individual accounts).
+            {" "}(subscribes to that feed on X, not each account; update the list on X if it falls behind this page).
           </div>
           <button
             aria-label="Copy AI prompt to clipboard"
@@ -1142,15 +1223,15 @@ export function FeedTabs({
               zIndex: 9999,
               whiteSpace: "nowrap",
             }}>
-              Prompt copied ✦ Paste it into Claude or a browser agent to auto-follow everyone
+              Prompt copied ✦ Paste into a browser-capable agent to follow everyone on the list
             </div>
           )}
         </div>
         )}
-        {!isPortfolio && <div style={{ borderBottom: "1px solid #eff3f4", marginTop: 12 }} />}
+        {!isPortfolioNav && <div style={{ borderBottom: "1px solid #eff3f4", marginTop: 12 }} />}
       </div>
 
-      {searchActive && displayItems.length === 0 && activeCat && (
+      {resourceSearchActive && displayResourceItems.length === 0 && activeListCat && (
         <div
           style={{
             padding: "48px 24px",
@@ -1161,16 +1242,16 @@ export function FeedTabs({
             borderBottom: "1px solid #eff3f4",
           }}
         >
-          No resources in {activeCat.label} match &quot;{resourceSearch.trim()}&quot;
+          No resources in {activeListCat.label} match &quot;{resourceSearch.trim()}&quot;
         </div>
       )}
 
-      {displayItems.map((item, i) => {
-        const screenshotPreviewBefore = displayItems
+      {displayResourceItems.map((item, i) => {
+        const screenshotPreviewBefore = displayResourceItems
           .slice(0, i)
           .filter((it) => !isXAccount(it)).length;
         return (
-        <div key={`${activeCat!.id}-${item.url}-${i}`}>
+        <div key={`${activeListCat!.id}-${item.url}-${i}`}>
           <TweetCard
             item={item}
             index={i}
