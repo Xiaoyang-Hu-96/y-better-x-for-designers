@@ -17,8 +17,15 @@
           "note": null,
           "tier": 1,
           "handle": "@samdape",
-          "bio": "making things · sam-peitz.com",
-          "localImg": "/avatars/samdape.jpg"
+          "bio": "making things · sam-peitz.com"
+        },
+        {
+          "name": "floguo",
+          "url": "https://x.com/floguo",
+          "note": null,
+          "tier": 1,
+          "handle": "@floguo",
+          "bio": "design engineer @paradigmai"
         },
         {
           "name": "Caleb Wu",
@@ -75,7 +82,8 @@
           "note": null,
           "tier": 2,
           "handle": "@tomjohndesign",
-          "bio": "Staff Product Designer @Vercel @v0"
+          "bio": "Staff Product Designer @Vercel @v0",
+          "localImg": "/avatars/tomjohndesign.jpg"
         },
         {
           "name": "haris",
@@ -83,8 +91,7 @@
           "note": null,
           "tier": 1,
           "handle": "@haris_chc",
-          "bio": "design & marketing @quartr_app",
-          "localImg": "/avatars/haris_chc.jpg"
+          "bio": "design & marketing @quartr_app"
         },
         {
           "name": "Karissa",
@@ -100,7 +107,8 @@
           "note": null,
           "tier": 2,
           "handle": "@soggyburritowu",
-          "bio": "designer @perplexity_ai • @Penn"
+          "bio": "designer @perplexity_ai • @Penn",
+          "localImg": "/avatars/soggyburritowu.jpg"
         },
         {
           "name": "McLane",
@@ -124,7 +132,8 @@
           "note": null,
           "tier": 2,
           "handle": "@joshpuckett",
-          "bio": "Designing at @IterationDesign — prev Dropbox / Wealthfront"
+          "bio": "Designing at @IterationDesign — prev Dropbox / Wealthfront",
+          "localImg": "/avatars/joshpuckett.jpg"
         },
         {
           "name": "Nad Chishtie",
@@ -132,7 +141,8 @@
           "note": null,
           "tier": 2,
           "handle": "@nadonomy",
-          "bio": "head of design & founding designer @lovable"
+          "bio": "head of design & founding designer @lovable",
+          "localImg": "/avatars/nadonomy.jpg"
         },
         {
           "name": "Jackie Zhang",
@@ -140,8 +150,7 @@
           "note": null,
           "tier": 2,
           "handle": "@jackie_zhang_ls",
-          "bio": "Senior Product Designer @friendsofbash",
-          "localImg": "/avatars/jackie_zhang_ls.jpg"
+          "bio": "Senior Product Designer @friendsofbash"
         },
         {
           "name": "keeyen",
@@ -157,8 +166,7 @@
           "note": null,
           "tier": 1,
           "handle": "@Ryan__Stephen",
-          "bio": "designer + prototyper",
-          "localImg": "/avatars/Ryan__Stephen.jpg"
+          "bio": "designer + prototyper"
         },
         {
           "name": "Kacper",
@@ -174,8 +182,7 @@
           "note": null,
           "tier": 2,
           "handle": "@Gavmn",
-          "bio": "Interaction designer @OpenAI",
-          "localImg": "/avatars/Gavmn.jpg"
+          "bio": "Interaction designer @OpenAI"
         },
         {
           "name": "Ryo Lu",
@@ -183,8 +190,7 @@
           "note": null,
           "tier": 1,
           "handle": "@ryolu_",
-          "bio": "Design @Cursor_ai — early @NotionHQ @Stripe",
-          "localImg": "/avatars/ryolu_.jpg"
+          "bio": "Design @Cursor_ai — early @NotionHQ @Stripe"
         },
         {
           "name": "Noah Levin",
@@ -200,8 +206,7 @@
           "note": null,
           "tier": 1,
           "handle": "@raunofreiberg",
-          "bio": "staff design engineer @Vercel · devouringdetails.com",
-          "localImg": "/avatars/raunofreiberg.jpg"
+          "bio": "staff design engineer @Vercel · devouringdetails.com"
         },
         {
           "name": "Wojciech Zieliński",
@@ -217,7 +222,8 @@
           "note": null,
           "tier": 2,
           "handle": "@farrelput",
-          "bio": "senior product designer — building @flareicons"
+          "bio": "senior product designer — building @flareicons",
+          "localImg": "/avatars/farrelput.jpg"
         },
         {
           "name": "Chan Karunamuni",
@@ -225,8 +231,7 @@
           "note": null,
           "tier": 2,
           "handle": "@chan_k",
-          "bio": "Human Interface designer @ Apple",
-          "localImg": "/avatars/chan_k.jpg"
+          "bio": "Human Interface designer @ Apple"
         },
         {
           "name": "Seungmee",
@@ -242,8 +247,7 @@
           "note": null,
           "tier": 2,
           "handle": "@toddham",
-          "bio": "Design engineer @monogram_ai — prev @Meta",
-          "localImg": "/avatars/toddham.jpg"
+          "bio": "Design engineer @monogram_ai — prev @Meta"
         },
         {
           "name": "Paco",
@@ -259,8 +263,7 @@
           "note": null,
           "tier": 1,
           "handle": "@jakubkrehel",
-          "bio": "founding design engineer @interfere_",
-          "localImg": "/avatars/jakubkrehel.jpg"
+          "bio": "founding design engineer @interfere_"
         },
         {
           "name": "JohnPhamous",
@@ -268,8 +271,7 @@
           "note": null,
           "tier": 2,
           "handle": "@JohnPhamous",
-          "bio": "design eng @Vercel — angel investor — a16z scout",
-          "localImg": "/avatars/JohnPhamous.png"
+          "bio": "design eng @Vercel — angel investor — a16z scout"
         },
         {
           "name": "Ilya · イリア",
@@ -293,8 +295,7 @@
           "note": null,
           "tier": 2,
           "handle": "@meshtimes_",
-          "bio": "telling stories with design / code / internet experiments",
-          "localImg": "/avatars/meshtimes_.jpg"
+          "bio": "telling stories with design / code / internet experiments"
         },
         {
           "name": "Emil Kowalski",
@@ -302,7 +303,8 @@
           "note": null,
           "tier": 2,
           "handle": "@emilkowalski",
-          "bio": "@Linear · animations.dev"
+          "bio": "@Linear · animations.dev",
+          "localImg": "/avatars/emilkowalski.jpg"
         },
         {
           "name": "pauline",
@@ -334,7 +336,8 @@
           "note": null,
           "tier": 2,
           "handle": "@wangdouglas",
-          "bio": "Product & Design lead of AI Design products — prev @Alibaba"
+          "bio": "Product & Design lead of AI Design products — prev @Alibaba",
+          "localImg": "/avatars/wangdouglas.jpg"
         },
         {
           "name": "Cheng-Wei Hu",
@@ -374,7 +377,8 @@
           "note": null,
           "tier": 2,
           "handle": "@CedrikStephen",
-          "bio": "branding & web · cedrikstephen.com"
+          "bio": "branding & web · cedrikstephen.com",
+          "localImg": "/avatars/CedrikStephen.jpg"
         },
         {
           "name": "Green Yang",
@@ -414,8 +418,7 @@
           "note": null,
           "tier": 2,
           "handle": "@monmichalczyk",
-          "bio": "websites / visual design / design resources @Framer",
-          "localImg": "/avatars/monmichalczyk.jpg"
+          "bio": "websites / visual design / design resources @Framer"
         },
         {
           "name": "Marko Ilic",
@@ -423,8 +426,7 @@
           "note": null,
           "tier": 2,
           "handle": "@markoilico",
-          "bio": "See.Design — design for Tech / SaaS & AI",
-          "localImg": "/avatars/markoilico.jpg"
+          "bio": "See.Design — design for Tech / SaaS & AI"
         },
         {
           "name": "Zsolt Kálmán",
@@ -512,7 +514,8 @@
           "note": null,
           "tier": 2,
           "handle": "@highpfloat",
-          "bio": "Developer & Designer"
+          "bio": "Developer & Designer",
+          "localImg": "/avatars/highpfloat.jpg"
         },
         {
           "name": "Prianca",
@@ -536,7 +539,8 @@
           "note": null,
           "tier": 2,
           "handle": "@marcofyi",
-          "bio": "cofounder @turfsports_ · prev @Vercel @Figma @Diagram"
+          "bio": "cofounder @turfsports_ · prev @Vercel @Figma @Diagram",
+          "localImg": "/avatars/marcofyi.jpg"
         },
         {
           "name": "Nan Yu",
@@ -663,7 +667,8 @@
           "note": "Design community resources",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://variant.com/favicon-light.svg"
         },
         {
           "name": "GSAP",
@@ -691,15 +696,6 @@
           "handle": null,
           "bio": null,
           "localImg": "https://www.unicorn.studio/images/ogg2.png"
-        },
-        {
-          "name": "Neumorphism",
-          "url": "https://neumorphism.io/#e0e0e0",
-          "note": "CSS neumorphism shadow generator",
-          "tier": 2,
-          "handle": null,
-          "bio": null,
-          "localImg": "https://neumorphism.io/ogImage.png"
         }
       ]
     },
@@ -750,7 +746,8 @@
           "note": "The largest library of open-source UI elements",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://imagedelivery.net/KMb5EadhEKC1gAE0LkjL1g/c802e23e-4d13-44ef-a2fe-46c467571900/public"
         },
         {
           "name": "Neobrutalism",
@@ -778,6 +775,15 @@
           "handle": null,
           "bio": null,
           "localImg": "https://imagedelivery.net/KMb5EadhEKC1gAE0LkjL1g/cb814b9d-45f8-46f5-3108-91e511990200/public"
+        },
+        {
+          "name": "Neumorphism",
+          "url": "https://neumorphism.io/#e0e0e0",
+          "note": "CSS neumorphism shadow generator",
+          "tier": 2,
+          "handle": null,
+          "bio": null,
+          "localImg": "https://neumorphism.io/ogImage.png"
         },
         {
           "name": "FreeFrontend",
@@ -887,7 +893,8 @@
           "note": "Wild ideas and will make you smile",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://sujankhadgi.com/og-thumbnail.png?v=2"
         },
         {
           "name": "Ryo Lu",
@@ -895,7 +902,8 @@
           "note": "The reference for OS-style portfolios",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://ryo.lu/favicon.png"
         },
         {
           "name": "Elisha Jeon",
@@ -939,7 +947,8 @@
           "note": "My favorite neo-brutalist portfolio out there",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/1oBQ5S4DCK6DJMORWSN5fPqkF4.png"
         },
         {
           "name": "Serena Li",
@@ -947,7 +956,8 @@
           "note": "Hard to imitate — the personal style is too strong",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://cdn.prod.website-files.com/6375aba502e4024e31970c83/672fdcf3187e27cc9ce6e276_cursor.png"
         },
         {
           "name": "Uttkarsh Mandaknale",
@@ -955,7 +965,8 @@
           "note": "Love the dreamy aesthetic",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/kxfGGTI5f87PMBIBJp1XxPIvcXg.png"
         },
         {
           "name": "Yihui Hu",
@@ -971,7 +982,8 @@
           "note": "3D & motion work is seriously impressive",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/DdeqJSa9nKbflQimrk8W7BYFDI.png"
         },
         {
           "name": "Marco Cornacchia",
@@ -979,7 +991,8 @@
           "note": "One of my favorite bento-style portfolios",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://cdn.prod.website-files.com/62c89bdb7c26b515f632de67/6317913448d0943c95005700_twitter-og-img.png"
         },
         {
           "name": "Gautam Joshi",
@@ -987,7 +1000,8 @@
           "note": "A fresh take on interaction patterns",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/vHoDDWp9wNuWLuPgXODg04rR5A.png"
         },
         {
           "name": "Angelo Arcilla",
@@ -995,7 +1009,8 @@
           "note": "I have no idea how long this took to build",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/HQ8DEI4shJtfWZsmiVfPkWxVu1c.png"
         },
         {
           "name": "Oğuz Yağız Kara",
@@ -1003,7 +1018,8 @@
           "note": "When you're good enough that you don't need a portfolio — this is how you make one anyway and it still shows serious craft",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://oguzyagiz.com/images/og/home.png"
         },
         {
           "name": "Alric Monteiro",
@@ -1011,7 +1027,8 @@
           "note": "Feels like stepping into a fully built cyberpunk universe",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/9FErA1R9lb9J925PipAsR4qgM.png"
         },
         {
           "name": "Emmi Wu",
@@ -1019,7 +1036,8 @@
           "note": "The visual and creative direction makes you want to keep scrolling",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/xN1cpVhyjSWIOT24GLCRkOnc.png"
         },
         {
           "name": "Jason Spielman",
@@ -1027,7 +1045,17 @@
           "note": "Can't believe I get to see a NotebookLM case study",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://jasonspielman.com/_assets/v11/95d7732b121da16788e666fc6792a8e2f3da8e46.png"
+        },
+        {
+          "name": "Jackie Hu",
+          "url": "https://jackiehu.design/",
+          "note": "Another portfolio people constantly \"borrow\" from",
+          "tier": 1,
+          "handle": null,
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/EymWq1q7hfKo4pdk9jYG5M6MaQ.png"
         },
         {
           "name": "john phamous",
@@ -1035,7 +1063,8 @@
           "note": "Vercel design engineer",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://pham.codes/images/hero.png"
         },
         {
           "name": "tom things",
@@ -1043,7 +1072,8 @@
           "note": "Design that feels alive",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://tomthings.fr/og_image.png"
         },
         {
           "name": "Andrea Da Silva",
@@ -1051,7 +1081,8 @@
           "note": "Already seen a lot of portfolios that look like this (so impactful)",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/eaHuiaQdZxmPWNWbtk5oNo09Bo.png"
         },
         {
           "name": "adam syed",
@@ -1059,7 +1090,8 @@
           "note": "Look at this when you have a lot of projects to show",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/rhHhcGXtZvFQjfZ1i58RasbZxY.png"
         },
         {
           "name": "Mayank Kinger",
@@ -1067,7 +1099,8 @@
           "note": "Solid. Just solid.",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/0xeePXTdA5ElbitK7I8z3eh4Alk.jpeg"
         },
         {
           "name": "Jackie Zhang",
@@ -1075,7 +1108,8 @@
           "note": "Strong visual and creative direction",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/rD6rBlswWHwt3kseTKnf98TFUQ8.png"
         },
         {
           "name": "Matt Sellers",
@@ -1083,7 +1117,8 @@
           "note": "Lovable lovable lovable",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/Z1McKxeqGJSTgOVqfAYx7FLPNM.png"
         },
         {
           "name": "Tan Tan Nguyen",
@@ -1091,7 +1126,8 @@
           "note": "Strong visual work",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/hIxUFf1Drx1QBJGms9IVkz6NV4.png?width=1440&height=1446"
         },
         {
           "name": "Mo's UX Portfolio",
@@ -1099,7 +1135,8 @@
           "note": "Rich use of motion",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/e1z91gDNtuxqFIgGCkLChhPFOSY.png"
         },
         {
           "name": "Uday Shankar",
@@ -1107,7 +1144,8 @@
           "note": "I don't usually into SaaS landing page-style portfolios — but this one is the exception",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/images/FFEtDBBuU1BQhX97vDhxCPKhU.png?scale-down-to=512&width=1200&height=485"
         },
         {
           "name": "Seungmee Lee",
@@ -1115,7 +1153,8 @@
           "note": "Love the idea of a customizable portfolio",
           "tier": 2,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://seungmee-lee.com/og.jpg"
         },
         {
           "name": "Xiaoyang Hu",
@@ -1123,7 +1162,8 @@
           "note": "If you love this site — chances are you'll love my portfolio too",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://framerusercontent.com/assets/BNcmSNoDz85vmhw2XVGHSg9p6A.jpg"
         }
       ]
     },
@@ -1138,7 +1178,8 @@
           "note": "Gallery of top-tier designer portfolios",
           "tier": 1,
           "handle": null,
-          "bio": null
+          "bio": null,
+          "localImg": "https://bestfolios.com/images/logo.svg"
         },
         {
           "name": "Wall of Portfolios",
@@ -1157,6 +1198,15 @@
           "handle": null,
           "bio": null,
           "localImg": "https://storage.googleapis.com/gpt-engineer-file-uploads/ALPFWLhZZdQKkJJcGN9TgBEfvwD2/social-images/social-1772205363048-open_graph.webp"
+        },
+        {
+          "name": "Aneta Kmiecik (LinkedIn)",
+          "url": "https://www.linkedin.com/in/anetakmiecik/",
+          "note": "Each post picks one common portfolio problem and compares how different designers solved it side by side, which is great for learning.",
+          "tier": 2,
+          "handle": null,
+          "bio": null,
+          "localImg": "https://media.licdn.com/dms/image/v2/D4D03AQE5tYZJa3l4Pw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730206240101?e=2147483647&v=beta&t=eYYa5on_2umxRyW8bzu5S-w8uVguiaU1WRZRiTzokWY"
         }
       ]
     }
