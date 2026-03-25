@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, useLayoutEffect } from "react";
+import type { CSSProperties } from "react";
+import { createPortal } from "react-dom";
 import { FeedTabs } from "./FeedTabs";
 import { SuggestModal } from "./SuggestModal";
 import { PollCard } from "./PollCard";
@@ -10,6 +12,25 @@ import { UI_SANS } from "@/lib/ui-font";
 import { withBasePath } from "@/lib/site-url";
 
 const CATEGORIES: Category[] = (dataJson as { categories: Category[] }).categories ?? [];
+
+const COPY_AI_PROMPT_TOAST_STYLE: CSSProperties = {
+  position: "fixed",
+  top: "max(16px, env(safe-area-inset-top, 0px))",
+  left: "50%",
+  transform: "translateX(-50%)",
+  boxSizing: "border-box",
+  maxWidth: "min(calc(100vw - 24px), 560px)",
+  background: "#1d9bf0",
+  color: "#fff",
+  padding: "12px 20px",
+  borderRadius: 50,
+  fontSize: 14,
+  fontWeight: 600,
+  boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+  zIndex: 100000,
+  textAlign: "center",
+  lineHeight: 1.35,
+};
 
 const SKILL_INSTALL_CMD = "npx skills add Xiaoyang-Hu-96/design-resource-library";
 
@@ -1070,28 +1091,15 @@ When done, briefly say how many new follows you made vs. already following.`;
       </nav>
       ) : null}
 
-      {/* Toast */}
-      {showToast && (
-        <div
-          style={{
-            position: "fixed",
-            bottom: 32,
-            left: "50%",
-            transform: "translateX(-50%)",
-            background: "#1d9bf0",
-            color: "#fff",
-            padding: "12px 20px",
-            borderRadius: 50,
-            fontSize: 14,
-            fontWeight: 600,
-            boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
-            zIndex: 9999,
-            whiteSpace: "nowrap",
-          }}
-        >
-          Prompt copied ✦ Paste into a browser-capable agent to follow everyone on the list
-        </div>
-      )}
+      {/* Toast — portal so position:fixed is relative to viewport (not sticky/filter ancestors). */}
+      {showToast
+        ? createPortal(
+            <div role="status" style={COPY_AI_PROMPT_TOAST_STYLE}>
+              Prompt copied ✦ Paste into a browser-capable agent to follow everyone on the list
+            </div>,
+            document.body
+          )
+        : null}
 
       <SuggestModal open={suggestOpen} onClose={() => setSuggestOpen(false)} />
     </div>

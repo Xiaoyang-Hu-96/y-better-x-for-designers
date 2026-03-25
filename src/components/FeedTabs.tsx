@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import type { CSSProperties } from "react";
+import { createPortal } from "react-dom";
 import { UI_SANS } from "@/lib/ui-font";
 import { withBasePath } from "@/lib/site-url";
 import { TweetCard, ScreenshotCard } from "./TweetCard";
@@ -9,6 +10,26 @@ import { PREVIEW_HIGH_PRIORITY_COUNT } from "./ScreenshotCard";
 import { ReplyCard } from "./ReplyCard";
 import type { Category, ResourceItem } from "@/types";
 import { getDomain, isXAccount } from "@/types";
+
+/** Viewport-fixed; must render via createPortal — ancestors may use filter/backdrop-filter. */
+const COPY_AI_PROMPT_TOAST_STYLE: CSSProperties = {
+  position: "fixed",
+  top: "max(16px, env(safe-area-inset-top, 0px))",
+  left: "50%",
+  transform: "translateX(-50%)",
+  boxSizing: "border-box",
+  maxWidth: "min(calc(100vw - 24px), 560px)",
+  background: "#1d9bf0",
+  color: "#fff",
+  padding: "12px 20px",
+  borderRadius: 50,
+  fontSize: 14,
+  fontWeight: 600,
+  boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+  zIndex: 100000,
+  textAlign: "center",
+  lineHeight: 1.35,
+};
 
 interface HomePost {
   text: string;
@@ -1207,25 +1228,14 @@ When done, briefly say how many new follows you made vs. already following.`;
           <div aria-live="polite" aria-atomic="true" style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)" }}>
             {bannerToast ? "Prompt copied to clipboard" : ""}
           </div>
-          {bannerToast && (
-            <div style={{
-              position: "fixed",
-              bottom: 32,
-              left: "50%",
-              transform: "translateX(-50%)",
-              background: "#1d9bf0",
-              color: "#fff",
-              padding: "12px 20px",
-              borderRadius: 50,
-              fontSize: 14,
-              fontWeight: 600,
-              boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
-              zIndex: 9999,
-              whiteSpace: "nowrap",
-            }}>
-              Prompt copied ✦ Paste into a browser-capable agent to follow everyone on the list
-            </div>
-          )}
+          {bannerToast
+            ? createPortal(
+                <div role="status" style={COPY_AI_PROMPT_TOAST_STYLE}>
+                  Prompt copied ✦ Paste into a browser-capable agent to follow everyone on the list
+                </div>,
+                document.body
+              )
+            : null}
         </div>
         )}
         {!isPortfolioNav && <div style={{ borderBottom: "1px solid #eff3f4", marginTop: 12 }} />}
