@@ -163,8 +163,9 @@ export function XShell() {
     return () => mq.removeEventListener("change", sync);
   }, []);
 
-  // #region agent log
+  // #region agent log (dev only — prod fetch to 127.0.0.1 triggers Chrome “access device / local network” prompt)
   useEffect(() => {
+    if (process.env.NODE_ENV !== "development") return;
     const gf = (el: Element | null | undefined) =>
       el ? getComputedStyle(el).fontFamily : null;
     const html = document.documentElement;
